@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ประวัติส่วนตัว | Kachapat Sungsila</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            font-family: "Kanit", sans-serif;
+
+            background: #eeeeee;
+
+            color: #111;
+
+        }
+
+
+        /* =========================
+           CONTAINER
+        ========================= */
+
+        .container {
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 40px auto;
+
+            background: white;
+
+            padding: 30px 35px 35px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.15);
+
+        }
+
+
+        /* =========================
+           PAGE TITLE
+        ========================= */
+
+        .page-title {
+
+            text-align: center;
+
+            font-size: 36px;
+
+            font-weight: 600;
+
+            color: #173bd1;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .page-title::before {
+
+            content: "< ";
+
+            color: #ffcc00;
+
+        }
+
+
+        .page-title::after {
+
+            content: " >";
+
+            color: #ffcc00;
+
+        }
+
+
+        /* =========================
+           PROFILE
+        ========================= */
+
+        .profile {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 40px;
+
+            padding: 25px;
+
+            border: 2px solid #244bd8;
+
+            border-radius: 18px;
+
+            background: white;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .profile-image {
+
+            width: 250px;
+
+            height: 250px;
+
+            flex-shrink: 0;
+
+            border-radius: 50%;
+
+            border: 5px solid #244bd8;
+
+            padding: 8px;
+
+            background: white;
+
+            box-shadow:
+                0 6px 15px rgba(0, 0, 0, 0.15);
+
+        }
+
+
+        .profile-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+        }
+
+
+        /* =========================
+           PROFILE TEXT
+        ========================= */
+
+        .profile-info {
+
+            flex: 1;
+
+        }
+
+
+        .profile-info h1 {
+
+            font-size: 40px;
+
+            color: #222;
+
+            line-height: 1.2;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .english-name {
+
+            font-size: 25px;
+
+            color: #244bd8;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .profile-description {
+
+            font-size: 18px;
+
+            color: #555;
+
+            line-height: 1.8;
+
+            max-width: 520px;
+
+        }
+
+
+        /* =========================
+           TWO COLUMN
+        ========================= */
+
+        .two-column {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 20px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        /* =========================
+           SECTION
+        ========================= */
+
+        .section {
+
+            border: 2px solid #244bd8;
+
+            border-radius: 15px;
+
+            overflow: hidden;
+
+            background: white;
+
+        }
+
+
+        .section-title {
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    #1446c9,
+                    #76a1f0
+                );
+
+            color: white;
+
+            font-size: 22px;
+
+            font-weight: 500;
+
+            padding: 8px 20px;
+
+        }
+
+
+        .section-content {
+
+            padding: 15px 20px;
+
+        }
+
+
+        /* =========================
+           PERSONAL INFORMATION
+        ========================= */
+
+        .info-item {
+
+            display: grid;
+
+            grid-template-columns: 160px 1fr;
+
+            gap: 5px;
+
+            padding: 6px 0;
+
+            font-size: 16px;
+
+            border-bottom: 1px solid #dddddd;
+
+        }
+
+
+        .info-item:last-child {
+
+            border-bottom: none;
+
+        }
+
+
+        .info-label {
+
+            color: #222;
+
+            font-weight: 500;
+
+        }
+
+
+        .info-value {
+
+            color: #444;
+
+        }
+
+
+        /* =========================
+           EDUCATION
+        ========================= */
+
+        .education {
+
+            border-left: 5px solid #244bd8;
+
+            background: #f5f7ff;
+
+            padding: 15px;
+
+            border-radius: 0 10px 10px 0;
+
+            min-height: 170px;
+
+        }
+
+
+        .education h3 {
+
+            font-size: 20px;
+
+            color: #222;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .education p {
+
+            color: #555;
+
+            font-size: 16px;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =========================
+           ENGLISH SCORE
+        ========================= */
+
+        .english-section {
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .score-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 15px;
+
+        }
+
+
+        .score {
+
+            text-align: center;
+
+            border: 2px solid #244bd8;
+
+            border-radius: 15px;
+
+            padding: 12px 10px;
+
+            background: #f7f8ff;
+
+        }
+
+
+        .score h3 {
+
+            color: #244bd8;
+
+            font-size: 20px;
+
+            margin-bottom: 3px;
+
+        }
+
+
+        .score p {
+
+            color: #555;
+
+            font-size: 16px;
+
+        }
+
+
+        /* =========================
+           HOBBY
+        ========================= */
+
+        .hobbies {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 10px;
+
+            width: 100%;
+
+        }
+
+
+        .hobby {
+
+            padding: 8px 8px;
+
+            border-radius: 20px;
+
+            background: #e9efff;
+
+            color: #244bd8;
+
+            font-size: 15px;
+
+            text-align: center;
+
+            white-space: nowrap;
+
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+
+            font-size: 16px;
+
+            color: #555;
+
+            line-height: 2.2;
+
+        }
+
+
+        /* =========================
+           BACK BUTTON
+        ========================= */
+
+        .back {
+
+            text-align: center;
+
+            margin: 25px 0 40px;
+
+        }
+
+
+        .btn {
+
+            display: inline-block;
+
+            padding: 10px 30px;
+
+            background:
+                linear-gradient(
+                    to right,
+                    #1744c9,
+                    #517ee9
+                );
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 25px;
+
+            font-size: 17px;
+
+            border: 2px solid #173bd1;
+
+            transition: 0.2s;
+
+        }
+
+
+        .btn:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 5px 12px rgba(0, 0, 0, 0.25);
+
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            text-align: center;
+
+            color: white;
+
+            background: #10104c;
+
+            padding: 18px;
+
+            font-size: 14px;
+
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .profile {
+
+                flex-direction: column;
+
+                text-align: center;
+
+            }
+
+
+            .profile-description {
+
+                max-width: 100%;
+
+            }
+
+
+            .two-column {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .score-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .container {
+
+                width: 95%;
+
+                padding: 25px 15px;
+
+                margin: 20px auto;
+
+            }
+
+
+            .page-title {
+
+                font-size: 30px;
+
+            }
+
+
+            .profile {
+
+                padding: 20px;
+
+            }
+
+
+            .profile-image {
+
+                width: 190px;
+
+                height: 190px;
+
+            }
+
+
+            .profile-info h1 {
+
+                font-size: 30px;
+
+            }
+
+
+            .english-name {
+
+                font-size: 21px;
+
+            }
+
+
+            .profile-description {
+
+                font-size: 16px;
+
+            }
+
+
+            .section-title {
+
+                font-size: 20px;
+
+            }
+
+
+            .info-item {
+
+                grid-template-columns: 130px 1fr;
+
+                font-size: 15px;
+
+            }
+
+
+            .score-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+
+            .hobbies {
+
+                grid-template-columns:
+                    repeat(4, 1fr);
+
+                gap: 5px;
+
+            }
+
+
+            .hobby {
+
+                font-size: 13px;
+
+                padding: 7px 3px;
+
+            }
+
+        }
+
+
+        @media (max-width: 400px) {
+
+            .info-item {
+
+                grid-template-columns: 1fr;
+
+                gap: 0;
+
+            }
+
+
+            .score-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .hobbies {
+
+                grid-template-columns:
+                    repeat(4, 1fr);
+
+            }
+
+
+            .hobby {
+
+                font-size: 11px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="container">
+
+
+        <!-- =========================
+             PAGE TITLE
+        ========================= -->
+
+        <div class="page-title">
+
+            ประวัติส่วนตัว
+
+        </div>
+
+
+
+        <!-- =========================
+             PROFILE
+        ========================= -->
+
+        <div class="profile">
+
+
+            <div class="profile-image">
+
+                <img
+                    src="profile.jpg"
+                    alt="คชาพัฒน์ สังศิละ"
+                >
+
+            </div>
+
+
+            <div class="profile-info">
+
+                <h1>
+                    คชาพัฒน์ สังศิละ
+                </h1>
+
+
+                <div class="english-name">
+
+                    Kachapat Sungsila
+
+                </div>
+
+
+                <div class="profile-description">
+
+                    นักเรียนสายวิทยาศาสตร์-คณิตศาสตร์ ที่สนใจด้านคอมพิวเตอร์
+
+                    <br>
+
+                    การเขียนโปรแกรม การออกแบบเว็บไซต์ และเทคโนโลยี
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================
+             ROW 1
+             PERSONAL + EDUCATION
+        ========================= -->
+
+        <div class="two-column">
+
+
+            <!-- PERSONAL INFORMATION -->
+
+            <section class="section">
+
+
+                <div class="section-title">
+
+                    ข้อมูลส่วนตัว
+
+                </div>
+
+
+                <div class="section-content">
+
+
+                    <div class="info-item">
+
+                        <div class="info-label">
+                            ชื่อ-สกุล
+                        </div>
+
+                        <div class="info-value">
+                            : นายคชาพัฒน์ สังศิละ
+                        </div>
+
+                    </div>
+
+                    <div class="info-item">
+
+                        <div class="info-label">
+                            ชื่อภาษาอังกฤษ
+                        </div>
+
+                        <div class="info-value">
+                            : Mr.Kachapat Sungsila
+                        </div>
+
+                    </div>
+
+                    <div class="info-item">
+
+                        <div class="info-label">
+                            ชื่อเล่น
+                        </div>
+
+                        <div class="info-value">
+                            : คิว
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <div class="info-label">
+                            วัน/เดือน/ปีเกิด
+                        </div>
+
+                        <div class="info-value">
+                            : 22 สิงหาคม 2551
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <div class="info-label">
+                            อายุ
+                        </div>
+
+                        <div class="info-value">
+                            : 18 ปี
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <div class="info-label">
+                            เชื้อชาติ / สัญชาติ
+                        </div>
+
+                        <div class="info-value">
+                            : ไทย
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <div class="info-label">
+                            ศาสนา
+                        </div>
+
+                        <div class="info-value">
+                            : พุทธ
+                        </div>
+
+                    </div>
+
+                    <div class="info-item">
+
+                        <div class="info-label">
+                            ที่อยู่ปัจจุบัน
+                        </div>
+
+                        <div class="info-value">
+                            : 27/52 หมู่ 5 ต.คลองสาม อ.คลองหลวง จ.ปทุมธานี 12120
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- EDUCATION -->
+
+            <section class="section">
+
+
+                <div class="section-title">
+
+                    ประวัติการศึกษา
+
+                </div>
+
+
+                <div class="section-content">
+
+
+                    <div class="education">
+
+                        <h3>
+
+                            โรงเรียนสวนกุหลาบวิทยาลัย รังสิต
+
+                        </h3>
+
+
+                        <p>
+
+                            ระดับมัธยมศึกษาตอนต้น
+
+                        </p>
+
+
+                        <p>
+
+                            แผนการเรียน : วิทยาศาสตร์ - คณิตศาสตร์ (GEP)
+
+                        </p>
+
+
+                        <br>
+
+
+                        <p>
+
+                            GPAX : 3.69
+
+                        </p>
+
+                    </div>
+
+                    <div class="education">
+
+                        <h3>
+
+                            โรงเรียนสวนกุหลาบวิทยาลัย รังสิต
+
+                        </h3>
+
+
+                        <p>
+
+                            ระดับมัธยมศึกษาตอนปลาย (เกรดเฉลี่ย 4 เทอม)
+
+                        </p>
+
+
+                        <p>
+
+                            แผนการเรียน : วิทยาศาสตร์ - คณิตศาสตร์
+
+                        </p>
+
+
+                        <br>
+
+
+                        <p>
+
+                            GPAX : 3.35
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+
+
+        <!-- =========================
+             ENGLISH SCORE
+        ========================= -->
+
+        <section class="section english-section">
+
+
+            <div class="section-title">
+
+                คะแนนภาษาอังกฤษ
+
+            </div>
+
+
+            <div class="section-content">
+
+
+                <div class="score-grid">
+
+
+                    <div class="score">
+
+                        <h3>
+                            TOEIC
+                        </h3>
+
+                        <p>
+                            410/990
+                        </p>
+
+                    </div>
+
+
+                    <div class="score">
+
+                        <h3>
+                            TU-GET
+                        </h3>
+
+                        <p>
+                            330/1000
+                        </p>
+
+                    </div>
+
+
+                    <div class="score">
+
+                        <h3>
+                            CU-TEP
+                        </h3>
+
+                        <p>
+                            39/120
+                        </p>
+
+                    </div>
+
+
+                    <div class="score">
+
+                        <h3>
+                            CEFR
+                        </h3>
+
+                        <p>
+                            A2
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             ROW 2
+             HOBBY + CONTACT
+        ========================= -->
+
+        <div class="two-column">
+
+
+            <!-- HOBBY -->
+
+            <section class="section">
+
+
+                <div class="section-title">
+
+                    งานอดิเรก
+
+                </div>
+
+
+                <div class="section-content">
+
+
+                    <div class="hobbies">
+
+
+                        <div class="hobby">
+                            เล่นเกม
+                        </div>
+
+
+                        <div class="hobby">
+                            ดูภาพยนตร์
+                        </div>
+
+
+                        <div class="hobby">
+                            ฟังเพลง
+                        </div>
+
+
+                        <div class="hobby">
+                            หมากรุกไทย
+                        </div>
+
+                        <div class="hobby">
+                            เล่นกีฬาแบดมินตัน
+                        </div>
+
+                        <div class="hobby">
+                            เล่นกีฬาวอลเลย์บอล
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- CONTACT -->
+
+            <section class="section">
+
+
+                <div class="section-title">
+
+                    ช่องทางติดต่อ
+
+                </div>
+
+
+                <div class="section-content">
+
+
+                    <div class="contact">
+
+                        📱 062-4705063
+
+                        <br>
+
+                        ✉️ kachapat66@gmail.com
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         BACK BUTTON
+    ========================= -->
+
+    <div class="back">
+
+        <a
+            href="index.html"
+            class="btn"
+        >
+
+            กลับหน้าหลัก
+
+        </a>
+
+    </div>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        © 2026 Kachapat Sungsila
+        | Personal Portfolio
+
+    </footer>
+
+
+</body>
+
+</html>
