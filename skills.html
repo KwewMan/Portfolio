@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ทักษะความสามารถ - คชาพัฒน์ สังศิละ</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* =========================
+           BODY
+        ========================= */
+
+        body {
+
+            font-family: "Kanit", sans-serif;
+
+            background: #eeeeee;
+
+            color: #111;
+
+            min-height: 100vh;
+
+            display: flex;
+
+            flex-direction: column;
+
+        }
+
+
+        /* =========================
+           CONTAINER
+        ========================= */
+
+        .container {
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 40px auto;
+
+            background: white;
+
+            padding: 35px 45px 45px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.15);
+
+        }
+
+
+        /* =========================
+           TITLE
+        ========================= */
+
+        h1 {
+
+            text-align: center;
+
+            font-size: 38px;
+
+            color: #173bd1;
+
+            margin-bottom: 35px;
+
+            font-weight: 600;
+
+        }
+
+
+        h1::before {
+
+            content: "< ";
+
+            color: #ffcc00;
+
+        }
+
+
+        h1::after {
+
+            content: " >";
+
+            color: #ffcc00;
+
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(5, 1fr);
+
+            gap: 22px;
+
+        }
+
+
+        /* =========================
+           SKILL CARD
+        ========================= */
+
+        .skill {
+
+            min-height: 170px;
+
+            border: 2px solid #244bd8;
+
+            border-radius: 18px;
+
+            background: white;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 18px;
+
+            transition: all 0.25s ease;
+
+        }
+
+
+        .skill:hover {
+
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 8px 18px rgba(0, 0, 0, 0.20);
+
+        }
+
+
+        /* =========================
+           ICON
+        ========================= */
+
+        .skill img {
+
+            width: 75px;
+
+            height: 75px;
+
+            object-fit: contain;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        /* =========================
+           TEXT
+        ========================= */
+
+        .skill p {
+
+            font-size: 18px;
+
+            font-weight: 500;
+
+            color: #222;
+
+            line-height: 1.25;
+
+        }
+
+
+        /* =========================
+           COMPUTER SKILLS SUMMARY
+        ========================= */
+
+        .computer-summary {
+
+            margin-top: 40px;
+
+            padding: 10px 15px 5px;
+
+        }
+
+
+        .computer-summary h2 {
+
+            display: table;
+
+            margin: 0 auto 25px;
+
+            padding: 5px 28px;
+
+            background: #06427f;
+
+            color: white;
+
+            font-size: 30px;
+
+            font-weight: 600;
+
+            line-height: 1.2;
+
+        }
+
+
+        .computer-summary ul {
+
+            margin: 0;
+
+            padding-left: 35px;
+
+        }
+
+
+        .computer-summary li {
+
+            font-size: 22px;
+
+            line-height: 1.7;
+
+            padding-left: 5px;
+
+            margin-bottom: 2px;
+
+        }
+
+
+        /* =========================
+           BACK BUTTON
+        ========================= */
+
+        .back-area {
+
+            text-align: center;
+
+            margin-top: 25px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .back-button {
+
+            display: inline-block;
+
+            padding: 9px 25px;
+
+            background: white;
+
+            color: #244bd8;
+
+            border: 2px solid #244bd8;
+
+            border-radius: 25px;
+
+            text-decoration: none;
+
+            font-size: 17px;
+
+            transition: 0.2s;
+
+        }
+
+
+        .back-button:hover {
+
+            background: #244bd8;
+
+            color: white;
+
+            transform: translateY(-2px);
+
+        }
+
+
+        /* =========================
+           FOOTER
+           ให้กว้างเท่ากับ Container
+        ========================= */
+
+        footer {
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin-top: auto;
+
+            margin-left: auto;
+
+            margin-right: auto;
+
+            background: #10104c;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 15px 20px;
+
+            font-size: 15px;
+
+            border-radius: 0;
+
+        }
+
+
+        footer p {
+
+            margin: 0;
+
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 1000px) {
+
+            .skills {
+
+                grid-template-columns:
+                    repeat(4, 1fr);
+
+            }
+
+        }
+
+
+        /* =========================
+           TABLET SMALL
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .container {
+
+                width: 94%;
+
+                padding: 30px 25px;
+
+            }
+
+
+            .skills {
+
+                grid-template-columns:
+                    repeat(3, 1fr);
+
+            }
+
+
+            .computer-summary li {
+
+                font-size: 20px;
+
+            }
+
+
+            footer {
+
+                width: 94%;
+
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .container {
+
+                width: 95%;
+
+                padding: 25px 15px;
+
+                margin: 20px auto;
+
+            }
+
+
+            h1 {
+
+                font-size: 30px;
+
+                margin-bottom: 25px;
+
+            }
+
+
+            .skills {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+                gap: 15px;
+
+            }
+
+
+            .skill {
+
+                min-height: 145px;
+
+                padding: 12px;
+
+            }
+
+
+            .skill img {
+
+                width: 60px;
+
+                height: 60px;
+
+            }
+
+
+            .skill p {
+
+                font-size: 15px;
+
+            }
+
+
+            /* =========================
+               COMPUTER SKILLS
+            ========================= */
+
+            .computer-summary {
+
+                margin-top: 30px;
+
+                padding: 5px;
+
+            }
+
+
+            .computer-summary h2 {
+
+                font-size: 24px;
+
+                padding: 5px 20px;
+
+                margin-bottom: 18px;
+
+            }
+
+
+            .computer-summary ul {
+
+                padding-left: 28px;
+
+            }
+
+
+            .computer-summary li {
+
+                font-size: 17px;
+
+                line-height: 1.6;
+
+            }
+
+
+            /* =========================
+               BACK BUTTON
+            ========================= */
+
+            .back-button {
+
+                font-size: 15px;
+
+                padding: 8px 20px;
+
+            }
+
+
+            /* =========================
+               FOOTER
+            ========================= */
+
+            footer {
+
+                width: 95%;
+
+                font-size: 13px;
+
+                padding: 12px 10px;
+
+            }
+
+        }
+
+
+        /* =========================
+           SMALL MOBILE
+        ========================= */
+
+        @media (max-width: 380px) {
+
+            .skills {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .computer-summary li {
+
+                font-size: 16px;
+
+            }
+
+
+            footer {
+
+                width: 95%;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         SKILLS CONTAINER
+    ========================= -->
+
+    <div class="container">
+
+        <h1>ทักษะความสามารถ</h1>
+
+
+        <div class="skills">
+
+
+            <!-- C -->
+
+            <div class="skill">
+
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/1920px-C_Programming_Language.svg.png"
+                    alt="C"
+                >
+
+                <p>C</p>
+
+            </div>
+
+
+            <!-- PYTHON -->
+
+            <div class="skill">
+
+                <img
+                    src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png"
+                    alt="Python"
+                >
+
+                <p>Python</p>
+
+            </div>
+
+
+            <!-- FLUTTER -->
+
+            <div class="skill">
+
+                <img
+                    src="https://avatars.githubusercontent.com/u/14101776?s=280&v=4"
+                    alt="Flutter"
+                >
+
+                <p>Flutter</p>
+
+            </div>
+
+
+            <!-- Arduino -->
+
+            <div class="skill">
+
+                <img
+                    src="https://img.icons8.com/color/1200/arduino.jpg"
+                    alt="Arduino"
+                >
+
+                <p>Arduino</p>
+
+            </div>
+
+
+            <!-- VS CODE -->
+
+            <div class="skill">
+
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1280px-Visual_Studio_Code_1.35_icon.svg.png"
+                    alt="VS Code"
+                >
+
+                <p>VS Code</p>
+
+            </div>
+
+
+            <!-- Code::Blocks -->
+
+            <div class="skill">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgNbvV28P-f1I5P_FBF4FenKCaq8HCFuZ4G9u_JeLvpA&s=10"
+                    alt="Code::Blocks"
+                >
+
+                <p>Code::Blocks</p>
+
+            </div>
+
+
+            <!-- HTML -->
+
+            <div class="skill">
+
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Html-1.svg/960px-Html-1.svg.png"
+                    alt="HTML"
+                >
+
+                <p>HTML</p>
+
+            </div>
+
+
+            <!-- CSS -->
+
+            <div class="skill">
+
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/960px-CSS3_logo.svg.png"
+                    alt="CSS"
+                >
+
+                <p>CSS</p>
+
+            </div>
+
+
+            <!-- JAVASCRIPT -->
+
+            <div class="skill">
+
+                <img
+                    src="https://www.w3schools.com/whatis/img_js.png"
+                    alt="JavaScript"
+                >
+
+                <p>JavaScript</p>
+
+            </div>
+
+
+            <!-- ADOBE PREMIERE -->
+
+            <div class="skill">
+
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Adobe_Premiere_Pro_CC_icon.svg/3840px-Adobe_Premiere_Pro_CC_icon.svg.png"
+                    alt="Adobe Premiere Pro"
+                >
+
+                <p>Adobe Premiere Pro</p>
+
+            </div>
+
+
+            <!-- FIGMA -->
+
+            <div class="skill">
+
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/960px-Figma-logo.svg.png"
+                    alt="Figma"
+                >
+
+                <p>Figma</p>
+
+            </div>
+
+
+            <!-- BLENDER -->
+
+            <div class="skill">
+
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Blender_logo_no_text.svg/960px-Blender_logo_no_text.svg.png"
+                    alt="Blender"
+                >
+
+                <p>Blender</p>
+
+            </div>
+
+
+            <!-- SKETCHUP -->
+
+            <div class="skill">
+
+                <img
+                    src="https://www.pngall.com/wp-content/uploads/15/3D-No-Background.png"
+                    alt="SketchUp"
+                >
+
+                <p>SketchUp</p>
+
+            </div>
+
+
+            <!-- GEOENZO -->
+
+            <div class="skill">
+
+                <img
+                    src="https://img.utdstc.com/icon/a5e/d4c/a5ed4c203c54ef89bf82bb95c10a29982aed3bc4f253e01821125f4ce0d45cbc:600"
+                    alt="GeoEnZo"
+                >
+
+                <p>GeoEnZo</p>
+
+            </div>
+
+
+            <!-- CANVA -->
+
+            <div class="skill">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgI8zbd_XaUfdEiApJXwMkQFTnHbbPzcRInkT_BHbiCw&s=10"
+                    alt="Canva"
+                >
+
+                <p>Canva</p>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =========================
+             COMPUTER SKILLS SUMMARY
+        ========================= -->
+
+        <div class="computer-summary">
+
+            <h2>ทักษะคอมพิวเตอร์</h2>
+
+            <ul>
+
+                <li>
+                    การเขียนโปรแกรมคอมพิวเตอร์ และการใช้โปรแกรม
+                    Visual Studio Code, Code::Blocks
+                </li>
+
+                <li>
+                    การเขียนแบบวิศวกรรมพื้นฐาน (GeoEnZo)
+                </li>
+
+                <li>
+                    การออกแบบโมเดล 3 มิติ (SketchUp, Blender)
+                </li>
+
+                <li>
+                    การตัดต่อวิดีโอ (Adobe Premiere Pro)
+                </li>
+
+            </ul>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =========================
+         BACK BUTTON
+    ========================= -->
+
+    <div class="back-area">
+
+        <a
+            href="index.html"
+            class="back-button"
+        >
+            ← กลับหน้าหลัก
+        </a>
+
+    </div>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        © 2026 Kachapat Sungsila | Computer Skills
+
+    </footer>
+
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+</body>
+
+</html>

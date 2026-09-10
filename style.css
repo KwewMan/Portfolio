@@ -1,0 +1,575 @@
+body {
+    background-color: rgb(255, 232, 232);
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+
+/* =========================
+   หัวข้อ
+========================= */
+
+h2 {
+    font-size: 36px;
+
+    color: white;
+
+    background: linear-gradient(
+        to bottom,
+        #1744c9,
+        #76a1f0
+    );
+
+    display: block;
+
+    width: 100%;
+
+    text-align: center;
+
+    padding: 12px 35px;
+
+    border-radius: 15px 15px 0 0;
+
+    margin: 0 0 20px 0;
+
+    border: 2px solid #244bd8;
+
+    border-bottom: none;
+
+    box-sizing: border-box;
+}
+
+
+p,
+li {
+    font-size: 24px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 20px;
+}
+
+
+/* =========================
+   ROW
+========================= */
+
+.row {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 40px;
+}
+
+
+/* =========================
+   COLUMN ซ้าย
+========================= */
+
+.column:first-child {
+    width: 40%;
+}
+
+
+/* =========================
+   COLUMN ขวา
+========================= */
+
+.column:last-child {
+    width: 60%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* =========================
+   รูปภาพทั่วไป
+========================= */
+
+.column img {
+    display: block;
+
+    margin-left: auto;
+
+    margin-right: auto;
+}
+
+
+/* =========================
+   รูปโปรไฟล์
+========================= */
+
+.profile-img {
+    display: block;
+
+    width: 400px;
+
+    height: 400px;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    border-radius: 50%;
+
+    margin: 20px auto;
+}
+
+
+/* =========================
+   กรอบรูปโปรไฟล์
+========================= */
+
+.profile-frame {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    border: 5px solid #244bd8;
+    padding: 8px;
+    background: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+
+/* =========================
+   รูปภายในกรอบ
+========================= */
+
+.profile-frame img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    object-position: center center;
+
+    border-radius: 50%;
+
+    display: block;
+
+    margin: auto;
+}
+
+
+/* =========================
+   เส้นคั่น
+========================= */
+
+hr {
+    margin: 40px 0;
+
+    border: none;
+
+    border-top: 2px solid #c95b5b;
+}
+
+
+/* =========================
+   รายการ
+========================= */
+
+ul {
+    margin: 0;
+
+    padding-left: 30px;
+}
+
+
+/* =========================
+   ส่วนทักษะความสามารถ
+========================= */
+
+.skills {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 25px;
+
+    justify-items: center;
+
+    align-items: start;
+
+    margin-top: 15px;
+}
+
+
+/* =========================
+   แต่ละทักษะ
+========================= */
+
+.skill {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* =========================
+   รูปไอคอนทักษะ
+========================= */
+
+.skill img {
+    width: 80px;
+
+    height: 80px;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   ชื่อทักษะ
+========================= */
+
+.skill p {
+    margin-top: 10px;
+
+    margin-bottom: 0;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    line-height: 1.2;
+}
+
+
+/* =========================
+   จัดหัวข้อทักษะให้อยู่ตรงกลาง
+========================= */
+
+.column:last-child h2 {
+    align-self: center;
+
+    width: 100%;
+
+    text-align: center;
+}
+
+
+/* =========================
+   หัวข้อฝั่งซ้าย
+========================= */
+
+.column:first-child h2 {
+    margin-left: 0;
+
+    width: 100%;
+
+    text-align: center;
+}
+
+
+/* =========================
+   SCREENSHOTS
+========================= */
+
+/*
+   ใช้ Flex
+   เพื่อให้แถวที่ 2
+   อยู่ตรงกลางอัตโนมัติ
+*/
+
+.screenshots-grid {
+    width: 100%;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 15px;
+}
+
+
+/* =========================
+   แต่ละช่อง Screenshot
+========================= */
+
+.screen-item {
+    width: calc((100% - 60px) / 5);
+
+    text-align: center;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   กรอบรูป Screenshot
+========================= */
+
+.screen-image {
+    height: 180px;
+
+    padding: 5px;
+
+    border: 2px solid #244bd8;
+
+    border-radius: 12px;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   รูป Screenshot
+========================= */
+
+.screen-image img {
+    max-width: 100%;
+
+    max-height: 100%;
+
+    object-fit: contain;
+
+    border-radius: 7px;
+}
+
+
+/* =========================
+   ชื่อ Screenshot
+========================= */
+
+.screen-item p {
+    color: #244bd8;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin-top: 7px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================
+   ปุ่ม
+========================= */
+
+.btn {
+    display: inline-block;
+
+    background-color: #c95b5b;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 12px 30px;
+
+    border-radius: 30px;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.btn:hover {
+    background-color: #b14c4c;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .container {
+        width: 90%;
+    }
+
+
+    .row {
+        flex-direction: column;
+    }
+
+
+    .column:first-child,
+    .column:last-child {
+        width: 100%;
+    }
+
+
+    .screen-item {
+        width: calc((100% - 30px) / 3);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        font-size: 18px;
+    }
+
+
+    h1 {
+        font-size: 36px;
+    }
+
+
+    h2 {
+        font-size: 28px;
+
+        padding: 10px 15px;
+    }
+
+
+    p,
+    li {
+        font-size: 18px;
+    }
+
+
+    .container {
+        width: 95%;
+
+        padding: 10px;
+    }
+
+
+    .profile-img {
+        width: 280px;
+
+        height: 280px;
+    }
+
+
+    .profile-frame {
+        width: 250px;
+
+        height: 250px;
+    }
+
+
+    .skills {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px;
+    }
+
+
+    .skill img {
+        width: 65px;
+
+        height: 65px;
+    }
+
+
+    .skill p {
+        font-size: 17px;
+    }
+
+
+    .screen-item {
+        width: calc((100% - 15px) / 2);
+    }
+
+
+    .screen-image {
+        height: 160px;
+    }
+
+
+    .screen-item p {
+        font-size: 16px;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+
+    h2 {
+        font-size: 24px;
+    }
+
+
+    .skills {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 15px;
+    }
+
+
+    .screen-item {
+        width: 100%;
+    }
+
+
+    .screen-image {
+        height: 180px;
+    }
+
+}

@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Web Application "ระบบบันทึกข้อมูลอุปกรณ์" | Kachapat Sungsila</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            padding: 25px 25px 0;
+
+            background: #eeeeee;
+
+            font-family: "Kanit", sans-serif;
+
+            color: #111;
+
+            min-height: 100vh;
+
+            display: flex;
+
+            flex-direction: column;
+        }
+
+
+        /* =========================
+           MAIN FRAME
+        ========================= */
+
+        .project-frame {
+
+            position: relative;
+
+            width: 100%;
+
+            max-width: 1280px;
+
+            margin: 15px auto 0;
+
+            background: white;
+
+            border: 5px solid #123fd3;
+
+            border-radius: 50px;
+
+            padding: 45px 25px 30px;
+
+            box-shadow:
+                0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+
+        /* =========================
+           TITLE
+        ========================= */
+
+        .project-title {
+
+            position: absolute;
+
+            top: -39px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            width: 740px;
+
+            max-width: 75%;
+
+            padding: 9px 25px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #092d82,
+                    #244bd8,
+                    #4777e8
+                );
+
+            color: white;
+
+            text-align: center;
+
+            font-size: 28px;
+
+            font-weight: 600;
+
+            font-style: italic;
+
+            border-radius: 35px;
+
+            white-space: nowrap;
+
+            box-shadow:
+                0 4px 8px rgba(0, 0, 0, 0.12);
+        }
+
+
+        /* =========================
+           CONTENT
+        ========================= */
+
+        .content {
+
+            display: grid;
+
+            grid-template-columns: 40% 60%;
+
+            gap: 15px;
+
+            align-items: start;
+        }
+
+
+        /* =========================
+           LEFT DESCRIPTION
+        ========================= */
+
+        .description {
+
+            font-size: 20px;
+
+            line-height: 1.42;
+
+            padding: 0 8px 0 0;
+        }
+
+
+        .description p {
+
+            margin: 0;
+        }
+
+
+        /* =========================
+           RIGHT SIDE
+        ========================= */
+
+        .right-content {
+
+            padding-left: 5px;
+        }
+
+
+        /* =========================
+           TOP TABLE IMAGE
+        ========================= */
+
+        .table-image {
+
+            width: 100%;
+
+            max-width: 700px;
+
+            height: 70px;
+
+            object-fit: fill;
+
+            display: block;
+
+            margin: 0 auto 10px;
+        }
+
+
+        /* =========================
+           SCREENSHOTS
+        ========================= */
+
+        .screenshots {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 12px;
+
+            align-items: center;
+        }
+
+
+        .screenshots img {
+
+            width: 100%;
+
+            height: 135px;
+
+            object-fit: contain;
+
+            border: 2px solid #222;
+
+            background: white;
+
+            display: block;
+        }
+
+
+        /* =========================
+           BOTTOM AREA
+        ========================= */
+
+        .bottom-area {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 10px;
+
+            align-items: center;
+
+            margin-top: 8px;
+        }
+
+
+        /* =========================
+           QR CODE
+        ========================= */
+
+        .qr-area {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 65px;
+        }
+
+
+        .qr-area img {
+
+            width: 125px;
+
+            height: 125px;
+
+            object-fit: contain;
+
+            display: block;
+        }
+
+
+        /* =========================
+           TOOLS
+        ========================= */
+
+        .tools {
+
+            display: flex;
+
+            justify-content: flex-end;
+
+            align-items: center;
+        }
+
+
+        .tools-box {
+
+            width: 250px;
+
+            background: #063d83;
+
+            border-radius: 28px;
+
+            padding: 12px 15px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 10px;
+        }
+
+
+        .tools-box img {
+
+            width: 48px;
+
+            height: 48px;
+
+            object-fit: contain;
+        }
+
+
+        .plus {
+
+            color: white;
+
+            font-size: 30px;
+
+            font-weight: 600;
+
+            line-height: 1;
+        }
+
+
+        /* =========================
+           PROJECT LINKS
+        ========================= */
+
+        .links {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 10px;
+
+            margin-top: 3px;
+        }
+
+
+        .project-link {
+
+            display: inline-block;
+
+            padding: 5px 10px;
+
+            background: #f8dce2;
+
+            color: #d91f3b;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+
+            font-size: 18px;
+
+            font-weight: 500;
+
+            white-space: nowrap;
+
+            transition: 0.2s;
+        }
+
+
+        .project-link:hover {
+
+            background: #d91f3b;
+
+            color: white;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           LEARNING
+        ========================= */
+
+        .learning {
+
+            margin-top: 8px;
+
+            font-size: 19px;
+
+            line-height: 1.4;
+
+            text-align: left;
+        }
+
+
+        .learning a {
+
+            color: #244bd8;
+
+            font-weight: 500;
+
+            text-decoration: underline;
+        }
+
+
+        /* =========================
+           BACK BUTTON
+        ========================= */
+
+        .back-area {
+
+            text-align: center;
+
+            margin-top: 25px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .back-button {
+
+            display: inline-block;
+
+            padding: 10px 25px;
+
+            border: 2px solid #244bd8;
+
+            border-radius: 25px;
+
+            color: #244bd8;
+
+            background: white;
+
+            text-decoration: none;
+
+            font-size: 17px;
+
+            transition: 0.2s;
+        }
+
+
+        .back-button:hover {
+
+            background: #244bd8;
+
+            color: white;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+
+            width: 100%;
+
+            max-width: 1200px;
+
+            margin-top: auto;
+
+            margin-left: auto;
+
+            margin-right: auto;
+
+            text-align: center;
+
+            padding: 15px 20px;
+
+            background: #10104c;
+
+            color: white;
+
+            font-size: 15px;
+        }
+
+
+        .footer p {
+
+            margin: 0;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 1000px) {
+
+            .project-frame {
+
+                padding:
+                    45px
+                    20px
+                    25px;
+            }
+
+
+            .project-title {
+
+                width: 650px;
+
+                font-size: 24px;
+            }
+
+
+            .content {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .description {
+
+                font-size: 19px;
+
+                padding-right: 0;
+            }
+
+
+            .right-content {
+
+                padding-left: 0;
+            }
+
+
+            .table-image {
+
+                height: auto;
+
+                max-height: 100px;
+            }
+
+
+            .qr-area {
+
+                gap: 50px;
+            }
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 767px) {
+
+            body {
+
+                padding:
+                    20px
+                    10px
+                    0;
+            }
+
+
+            .project-frame {
+
+                margin-top: 25px;
+
+                border-width: 4px;
+
+                border-radius: 30px;
+
+                padding:
+                    35px
+                    15px
+                    20px;
+            }
+
+
+            .project-title {
+
+                top: -28px;
+
+                width: 90%;
+
+                max-width: 90%;
+
+                padding:
+                    7px
+                    10px;
+
+                font-size: 17px;
+
+                border-radius: 25px;
+
+                white-space: normal;
+            }
+
+
+            .description {
+
+                font-size: 17px;
+
+                line-height: 1.45;
+            }
+
+
+            .table-image {
+
+                height: auto;
+
+                max-height: none;
+
+                object-fit: contain;
+            }
+
+
+            .screenshots {
+
+                grid-template-columns: 1fr;
+
+                gap: 10px;
+            }
+
+
+            .screenshots img {
+
+                height: auto;
+
+                max-height: 220px;
+            }
+
+
+            .bottom-area {
+
+                grid-template-columns: 1fr;
+
+                gap: 15px;
+            }
+
+
+            .qr-area {
+
+                gap: 25px;
+            }
+
+
+            .qr-area img {
+
+                width: 105px;
+
+                height: 105px;
+            }
+
+
+            .tools {
+
+                justify-content: center;
+            }
+
+
+            .tools-box {
+
+                width: 220px;
+            }
+
+
+            .tools-box img {
+
+                width: 42px;
+
+                height: 42px;
+            }
+
+
+            .links {
+
+                flex-wrap: wrap;
+
+                gap: 8px;
+            }
+
+
+            .project-link {
+
+                font-size: 15px;
+
+                white-space: normal;
+
+                text-align: center;
+            }
+
+
+            .learning {
+
+                font-size: 16px;
+            }
+
+
+            .back-area {
+
+                margin-top: 20px;
+
+                margin-bottom: 20px;
+            }
+
+
+            .footer {
+
+                padding: 15px;
+
+                font-size: 13px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         PROJECT FRAME
+    ========================== -->
+
+    <main class="project-frame">
+
+
+        <!-- TITLE -->
+
+        <div class="project-title">
+
+            Web Application "ระบบบันทึกข้อมูลอุปกรณ์"
+
+        </div>
+
+
+
+        <!-- =========================
+             MAIN CONTENT
+        ========================== -->
+
+        <div class="content">
+
+
+            <!-- =========================
+                 LEFT
+            ========================== -->
+
+            <div class="description">
+
+                <p>
+                    การพัฒนาเว็บแอปพลิเคชันระบบบันทึกข้อมูลอุปกรณ์
+                    ด้วย Canva AI, Google Sheets และ Google Apps Script
+                    โดยแบ่งการทำงานเป็น 2 ส่วนอย่างเป็นระบบ
+                    ประกอบด้วย
+                </p>
+
+
+                <p>
+                    Link 1 : ระบบบันทึกข้อมูล สำหรับพนักงาน
+                </p>
+
+
+                <p>
+                    Link 2 : ระบบของผู้บริหาร
+                </p>
+
+
+                <p>
+                    กระบวนการพัฒนาเริ่มต้นจากการใช้คำสั่ง (Prompt)
+                    ร่วมกับ Canva AI ในการออกแบบหน้าจอ
+                    จากนั้นนำโค้ดไปปรับแต่งบน Visual Studio Code
+                    เพื่อเชื่อมข้อมูลผ่าน Google Apps Script
+                    โดยข้อมูลจากฟอร์มจะถูกส่งไปยังฐานข้อมูล
+                    Google Sheets
+                </p>
+
+
+                <p>
+                    ระบบจะดึงข้อมูลจากตารางกลับมาอัปเดตบนหน้า
+                    Dashboard แบบเรียลไทม์ผ่านการเปิดใช้งาน
+                    เว็บแอปพลิเคชันทั้ง 2 ส่วน
+                </p>
+
+
+                <p>
+                    ผลลัพธ์ที่ได้ช่วยให้พนักงานสามารถบันทึกข้อมูล
+                    ได้สะดวกผ่านสมาร์ตโฟนหรือคอมพิวเตอร์
+                    และผู้บริหารสามารถตรวจสอบสถานะอุปกรณ์
+                    ได้ทันที ช่วยลดขั้นตอนและเพิ่มประสิทธิภาพ
+                    ในการบริหารจัดการได้อย่างเป็นรูปธรรม
+                </p>
+
+            </div>
+
+
+
+            <!-- =========================
+                 RIGHT
+            ========================== -->
+
+            <div class="right-content">
+
+
+                <!-- ตารางข้อมูล -->
+
+                <img
+                    src="webapp-table.png"
+                    class="table-image"
+                    alt="ตารางข้อมูลอุปกรณ์"
+                >
+
+
+
+                <!-- Screenshot -->
+
+                <div class="screenshots">
+
+
+                    <img
+                        src="webapp-code1.png"
+                        alt="โค้ดระบบ Web Application"
+                    >
+
+
+                    <img
+                        src="webapp-code2.png"
+                        alt="โค้ดระบบ Google Apps Script"
+                    >
+
+
+                    <img
+                        src="webapp-dashboard.png"
+                        alt="Dashboard สรุปผล"
+                    >
+
+
+                </div>
+
+
+
+                <!-- =========================
+                     QR + TOOLS
+                ========================== -->
+
+                <div class="bottom-area">
+
+
+                    <!-- QR -->
+
+                    <div>
+
+
+                        <div class="qr-area">
+
+
+                            <img
+                                src="webapp-qr1.png"
+                                alt="QR Code ระบบบันทึกข้อมูลอุปกรณ์"
+                            >
+
+
+                            <img
+                                src="webapp-qr2.png"
+                                alt="QR Code Dashboard"
+                            >
+
+
+                        </div>
+
+
+
+                        <!-- LINKS -->
+
+                        <div class="links">
+
+
+                            <a
+                                href="https://docs.google.com/spreadsheets/d/11wmH2Tegp06AL0dMvEOBEatB8XOeeimq8-CUg4PDk4g/edit?usp=drivesdk"
+                                class="project-link"
+                                target="_blank"
+                            >
+                                ลิงก์ฟอร์มบันทึกข้อมูลอุปกรณ์
+                            </a>
+
+
+                            <a
+                                href="https://kwewman.github.io/Medical/"
+                                class="project-link"
+                                target="_blank"
+                            >
+                                ลิงก์ Dashboard สรุปผล
+                            </a>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- =========================
+                         TOOLS
+                    ========================== -->
+
+                    <div class="tools">
+
+
+                        <div class="tools-box">
+
+
+                            <img
+                                src="https://logos-world.net/wp-content/uploads/2020/02/Canva-New-Logo.png"
+                                alt="Canva"
+                            >
+
+
+                            <span class="plus">
+                                +
+                            </span>
+
+
+                            <img
+                                src="https://mailmeteor.com/logos/assets/PNG/Google_Sheets_Logo_512px.png"
+                                alt="Google Sheets"
+                            >
+
+
+                            <span class="plus">
+                                +
+                            </span>
+
+
+                            <img
+                                src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_Apps_Script.svg/1280px-Google_Apps_Script.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+                                alt="Google Apps Script"
+                            >
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =========================
+                     LEARNING
+                ========================== -->
+
+                <div class="learning">
+
+
+                    <a
+                        href="#"
+                        target="_blank"
+                    >
+                        สิ่งที่ได้เรียนรู้ :
+                    </a>
+
+
+                    ได้พัฒนาทักษะด้าน Prompt Engineering
+                    ในการสั่งงาน AI ควบคู่กับการออกแบบ UI
+                    ของระบบเว็บแอปพลิเคชัน ตลอดจนทักษะ
+                    การแก้ไขโค้ดผ่านโปรแกรม Visual Studio Code
+                    เพื่อเชื่อมต่อระบบได้อย่างถูกต้อง
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         BACK BUTTON
+    ========================== -->
+
+    <div class="back-area">
+
+
+        <a
+            href="projects.html"
+            class="back-button"
+        >
+            ← กลับหน้ารวมผลงาน
+        </a>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026 Kachapat Sungsila | Projects
+        </p>
+
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1919 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ผลงาน | Kachapat Sungsila</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* =========================
+           HTML / BODY
+        ========================= */
+
+        html,
+        body {
+            min-height: 100%;
+        }
+
+
+        body {
+            margin: 0;
+
+            padding: 25px 25px 0;
+
+            background: #eeeeee;
+
+            font-family: "Kanit", sans-serif;
+
+            color: #111;
+
+            min-height: 100vh;
+
+            display: flex;
+
+            flex-direction: column;
+        }
+
+
+        /* =========================
+           MAIN PAGE
+           เหมือนโครงสร้าง Blender
+        ========================= */
+
+        .page {
+            position: relative;
+
+            width: 100%;
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            background: white;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+            background:
+                linear-gradient(
+                    100deg,
+                    #05051c,
+                    #15145d,
+                    #302eb0
+                );
+
+            color: white;
+
+            padding: 15px 30px;
+
+            text-align: center;
+        }
+
+
+        .header-small {
+            color: #ffdc32;
+
+            font-size: 24px;
+
+            font-weight: 600;
+        }
+
+
+        .header-title {
+            font-size: 38px;
+
+            font-weight: 700;
+
+            line-height: 1.2;
+        }
+
+
+        .header-title::before {
+            content: "< ";
+
+            color: #ffdc32;
+        }
+
+
+        .header-title::after {
+            content: " >";
+
+            color: #ffdc32;
+        }
+
+
+        /* =========================
+           CONTENT
+        ========================= */
+
+        .content {
+            padding: 25px 35px 35px;
+        }
+
+
+        /* =========================
+           PROJECT TITLE
+        ========================= */
+
+        .project-title {
+            text-align: center;
+
+            margin-bottom: 20px;
+        }
+
+
+        .project-title h1 {
+            display: inline-block;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    to right,
+                    #1744c9,
+                    #517ee9
+                );
+
+            padding: 8px 35px;
+
+            border-radius: 30px;
+
+            font-size: 30px;
+
+            font-weight: 600;
+        }
+
+
+        .project-title h2 {
+            margin: 0;
+
+            font-size: 30px;
+
+            font-weight: 600;
+        }
+
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .project-intro {
+            display: grid;
+
+            grid-template-columns: 1fr;
+
+            gap: 20px;
+
+            align-items: stretch;
+
+            margin-bottom: 20px;
+        }
+
+
+        .description-box {
+            width: 100%;
+
+            border: 2px solid #244bd8;
+
+            border-radius: 15px;
+
+            padding: 18px 20px;
+
+            background: #f8f9ff;
+
+            font-size: 16px;
+
+            line-height: 1.7;
+        }
+
+
+        .description-box strong {
+            color: #244bd8;
+        }
+
+
+        /* =========================
+           PROJECT MAIN IMAGE
+        ========================= */
+
+        .main-image-box {
+            border: 2px solid #244bd8;
+
+            border-radius: 15px;
+
+            padding: 8px;
+
+            background: white;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+
+        .main-image-box img {
+            width: 100%;
+
+            height: 190px;
+
+            object-fit: contain;
+
+            border-radius: 10px;
+        }
+
+
+        /* =========================
+           SECTION TITLE
+        ========================= */
+
+        .section-title {
+            color: #244bd8;
+
+            font-size: 22px;
+
+            font-weight: 600;
+
+            margin-top: 15px;
+
+            margin-bottom: 5px;
+        }
+
+
+        /* =========================
+           OBJECTIVE
+        ========================= */
+
+        .objective {
+            font-size: 16px;
+
+            line-height: 1.7;
+
+            margin-bottom: 10px;
+        }
+
+
+        .objective ul {
+            margin: 0;
+
+            padding-left: 25px;
+        }
+
+
+        .objective li {
+            margin-bottom: 3px;
+        }
+
+
+        /* =========================
+           PROCEDURE
+        ========================= */
+
+        .procedure {
+            margin-top: 15px;
+        }
+
+
+        .procedure-list {
+            margin: 0;
+
+            padding-left: 25px;
+
+            font-size: 16px;
+
+            line-height: 1.8;
+        }
+
+
+        .procedure-list li {
+            margin-bottom: 3px;
+        }
+
+
+        .procedure-list strong {
+            color: #e32929;
+        }
+
+
+        /* =========================
+           TECHNOLOGY
+        ========================= */
+
+        .technology {
+            margin-top: 20px;
+        }
+
+
+        .technology .section-title {
+            margin-bottom: 10px;
+        }
+
+
+        .technology-box {
+            background: #073f78;
+
+            padding: 10px 12px;
+
+            width: 100%;
+
+            overflow-x: auto;
+
+            border-radius: 3px;
+        }
+
+
+        /* =========================
+           TECHNOLOGY FLOW
+        ========================= */
+
+        .technology-flow {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            min-width: 950px;
+        }
+
+
+        /* =========================
+           TECHNOLOGY ITEM
+        ========================= */
+
+        .technology-item {
+            flex: 1;
+
+            text-align: center;
+
+            color: white;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+        }
+
+
+        .technology-item .top-text {
+            font-size: 14px;
+
+            font-weight: 600;
+
+            line-height: 1.25;
+
+            min-height: 38px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+        }
+
+
+        .technology-item img {
+            width: 55px;
+
+            height: 55px;
+
+            object-fit: contain;
+
+            margin: 4px 0;
+        }
+
+
+        .technology-item .bottom-text {
+            font-size: 14px;
+
+            font-weight: 600;
+
+            line-height: 1.2;
+
+            text-align: center;
+        }
+
+
+        /* =========================
+           TECHNOLOGY ARROW
+        ========================= */
+
+        .tech-arrow {
+            width: 45px;
+
+            height: 3px;
+
+            background: white;
+
+            position: relative;
+
+            flex-shrink: 0;
+
+            margin: 0 5px;
+        }
+
+
+        .tech-arrow::after {
+            content: "";
+
+            position: absolute;
+
+            right: -2px;
+
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            width: 0;
+
+            height: 0;
+
+            border-top: 8px solid transparent;
+
+            border-bottom: 8px solid transparent;
+
+            border-left: 13px solid white;
+        }
+
+
+        /* =========================
+           SCREENSHOTS
+        ========================= */
+
+        .screenshots {
+            margin-top: 25px;
+        }
+
+
+        .screenshots-title {
+            text-align: center;
+
+            font-size: 22px;
+
+            color: #244bd8;
+
+            font-weight: 600;
+
+            margin-bottom: 15px;
+        }
+
+
+        .screenshots-grid {
+            width: 100%;
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            margin-top: 15px;
+        }
+
+
+        /* =========================
+           SCREEN ITEM
+        ========================= */
+
+        .screen-item {
+            width: 190px;
+
+            text-align: center;
+
+            flex-shrink: 0;
+        }
+
+
+        /* =========================
+           SCREEN IMAGE
+        ========================= */
+
+        .screen-image {
+            height: 180px;
+
+            padding: 5px;
+
+            border: 2px solid #244bd8;
+
+            border-radius: 12px;
+
+            background: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            overflow: hidden;
+        }
+
+
+        .screen-image img {
+            max-width: 100%;
+
+            max-height: 100%;
+
+            object-fit: contain;
+
+            border-radius: 7px;
+        }
+
+
+        .screen-item p {
+            color: #244bd8;
+
+            font-size: 14px;
+
+            font-weight: 500;
+
+            margin-top: 7px;
+
+            line-height: 1.4;
+        }
+
+
+        /* =========================
+           APPOINTMENT
+        ========================= */
+
+        .appointment-title {
+            margin-top: 5px;
+
+            margin-bottom: 0;
+        }
+
+
+        .appointment-info {
+            text-align: center;
+
+            margin-top: 5px;
+
+            line-height: 1.6;
+
+            width: 100%;
+
+            color: #244bd8;
+        }
+
+
+        .appointment-info strong {
+            display: block;
+
+            margin-bottom: 3px;
+
+            color: #244bd8;
+        }
+
+
+        .appointment-info ul {
+            display: inline-block;
+
+            text-align: left;
+
+            margin: 0 auto;
+
+            padding-left: 25px;
+        }
+
+
+        .appointment-info li {
+            padding-left: 3px;
+
+            margin-bottom: 2px;
+
+            color: #244bd8;
+        }
+
+
+        .screen-item.appointment-item {
+            width: 250px;
+        }
+
+
+        .screen-item.appointment-item .screen-image {
+            height: 180px;
+        }
+
+
+        /* =========================
+           DETAIL SECTION
+        ========================= */
+
+        .detail-section {
+            margin-top: 25px;
+        }
+
+
+        .detail-box {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            align-items: flex-start;
+
+            gap: 20px;
+        }
+
+
+        .detail-card {
+            width: calc(50% - 10px);
+
+            border: 2px solid #244bd8;
+
+            border-radius: 15px;
+
+            overflow: hidden;
+        }
+
+
+        .detail-card-title {
+            background:
+                linear-gradient(
+                    to bottom,
+                    #1446c9,
+                    #76a1f0
+                );
+
+            color: white;
+
+            padding: 8px 15px;
+
+            font-size: 19px;
+
+            font-weight: 500;
+        }
+
+
+        .detail-card-content {
+            padding: 15px;
+
+            font-size: 15px;
+
+            line-height: 1.7;
+        }
+
+
+        .detail-card-content p {
+            margin-bottom: 0;
+        }
+
+
+        .detail-card-content ul {
+            padding-left: 22px;
+
+            margin-bottom: 0;
+        }
+
+
+        /* =========================
+           QR CODE
+        ========================= */
+
+        .qr-item {
+            width: 200px;
+
+            text-align: center;
+
+            margin: 10px auto 0;
+        }
+
+
+        .qr-item .screen-image {
+            width: 200px;
+
+            height: 200px;
+
+            padding: 0;
+
+            border: none;
+
+            border-radius: 0;
+
+            background: transparent;
+
+            overflow: visible;
+        }
+
+
+        .qr-item .screen-image img {
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: contain;
+
+            border-radius: 0;
+        }
+
+
+        .qr-title {
+            color: #244bd8;
+
+            font-size: 22px;
+
+            font-weight: 700;
+
+            margin-top: 7px;
+
+            line-height: 1.4;
+        }
+
+
+        /* =========================
+           RESULT
+        ========================= */
+
+        .result {
+            margin-top: 20px;
+
+            background: #f5f7ff;
+
+            border-left: 5px solid #244bd8;
+
+            border-radius: 0 12px 12px 0;
+
+            padding: 15px 20px;
+        }
+
+
+        .result-title {
+            color: #244bd8;
+
+            font-size: 20px;
+
+            font-weight: 600;
+
+            margin-bottom: 5px;
+        }
+
+
+        .result p {
+            font-size: 16px;
+
+            line-height: 1.7;
+
+            color: #444;
+
+            margin-bottom: 0;
+        }
+
+
+        /* =========================
+           BACK BUTTON
+           เหมือน Blender
+        ========================= */
+
+        .back-area {
+            text-align: center;
+
+            margin-top: 25px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .back-button {
+            display: inline-block;
+
+            padding: 9px 25px;
+
+            background: white;
+
+            color: #244bd8;
+
+            border: 2px solid #244bd8;
+
+            border-radius: 25px;
+
+            text-decoration: none;
+
+            font-size: 17px;
+
+            transition: 0.2s;
+        }
+
+
+        .back-button:hover {
+            background: #244bd8;
+
+            color: white;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           FOOTER
+           เหมือน Blender
+        ========================= */
+
+        footer {
+            width: 100%;
+
+            max-width: 1200px;
+
+            margin-top: auto;
+
+            margin-left: auto;
+
+            margin-right: auto;
+
+            background: #10104c;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 15px 20px;
+
+            font-size: 15px;
+
+            border-radius: 0;
+        }
+
+
+        footer p {
+            margin: 0;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            body {
+                padding: 15px 15px 0;
+            }
+
+
+            .page {
+                width: 100%;
+
+                max-width: 1200px;
+
+                margin: 0 auto;
+            }
+
+
+            .content {
+                padding: 25px 25px 30px;
+            }
+
+
+            .project-title h1 {
+                font-size: 28px;
+            }
+
+
+            .project-title h2 {
+                font-size: 26px;
+            }
+
+
+            .main-image-box img {
+                height: 250px;
+            }
+
+
+            .technology-box {
+                overflow-x: auto;
+            }
+
+
+            .technology-flow {
+                min-width: 950px;
+            }
+
+
+            .screen-item {
+                width: 190px;
+            }
+
+
+            .screen-item.appointment-item {
+                width: 250px;
+            }
+
+
+            footer {
+                font-size: 14px;
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 10px 10px 0;
+            }
+
+
+            .page {
+                width: 100%;
+
+                max-width: none;
+
+                margin: 0 auto;
+
+                border-radius: 20px;
+            }
+
+
+            .header {
+                padding: 15px;
+            }
+
+
+            .header-small {
+                font-size: 20px;
+            }
+
+
+            .header-title {
+                font-size: 28px;
+            }
+
+
+            .content {
+                padding: 20px 15px 25px;
+            }
+
+
+            .project-title {
+                margin-bottom: 15px;
+            }
+
+
+            .project-title h1 {
+                font-size: 24px;
+
+                padding: 8px 20px;
+            }
+
+
+            .project-title h1 span {
+                font-size: 16px !important;
+            }
+
+
+            .project-title h2 {
+                font-size: 22px;
+            }
+
+
+            .description-box {
+                font-size: 15px;
+
+                padding: 15px;
+            }
+
+
+            .technology-box {
+                overflow-x: auto;
+            }
+
+
+            .technology-flow {
+                min-width: 950px;
+            }
+
+
+            .screenshots-grid {
+                display: flex;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 15px;
+            }
+
+
+            .screen-item {
+                width: calc((100% - 15px) / 2);
+            }
+
+
+            .screen-item.appointment-item {
+                width: 100%;
+
+                max-width: 250px;
+            }
+
+
+            .detail-box {
+                display: flex;
+
+                flex-direction: column;
+
+                align-items: center;
+            }
+
+
+            .detail-card {
+                width: 100%;
+            }
+
+
+            /* QR */
+
+            .qr-item {
+                width: 250px;
+            }
+
+
+            .qr-item .screen-image {
+                width: 250px;
+
+                height: 250px;
+            }
+
+
+            .screen-image {
+                height: 180px;
+            }
+
+
+            /* ปุ่มกลับ */
+
+            .back-area {
+                margin-top: 20px;
+
+                margin-bottom: 20px;
+            }
+
+
+            .back-button {
+                font-size: 15px;
+
+                padding: 8px 20px;
+            }
+
+
+            /* Footer */
+
+            footer {
+                font-size: 13px;
+
+                padding: 12px 10px;
+            }
+
+        }
+
+
+        /* =========================
+           SMALL MOBILE
+        ========================= */
+
+        @media (max-width: 400px) {
+
+            .header-title {
+                font-size: 24px;
+            }
+
+
+            .technology-flow {
+                min-width: 950px;
+            }
+
+
+            .screenshots-grid {
+                display: flex;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 15px;
+            }
+
+
+            .screen-item {
+                width: 100%;
+            }
+
+
+            .screen-item.appointment-item {
+                width: 100%;
+
+                max-width: 250px;
+            }
+
+
+            .screen-image {
+                height: 150px;
+            }
+
+
+            .qr-item {
+                width: 220px;
+            }
+
+
+            .qr-item .screen-image {
+                width: 220px;
+
+                height: 220px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         MAIN PAGE
+    ========================= -->
+
+    <div class="page">
+
+
+        <!-- =========================
+             HEADER
+        ========================= -->
+
+        <header class="header">
+
+            <div class="header-title">
+                ผลงานด้านคอมพิวเตอร์
+            </div>
+
+        </header>
+
+
+        <!-- =========================
+             CONTENT
+        ========================= -->
+
+        <main class="content">
+
+
+            <!-- ประเภทผลงาน -->
+
+            <div class="project-title">
+
+                <h2 style="color: red;">
+                    Android Mobile Application
+                </h2>
+
+            </div>
+
+
+            <!-- ชื่อผลงาน -->
+
+            <div class="project-title">
+
+                <h1>
+
+                    MyBP
+
+                    <span style="font-size: 18px;">
+                        | บันทึกสุขภาพความดัน
+                    </span>
+
+                </h1>
+
+            </div>
+
+
+            <!-- =========================
+                 INTRO
+            ========================= -->
+
+            <div class="project-intro">
+
+                <div class="description-box">
+
+                    <p>
+
+                        <strong>ที่มาของผลงาน :</strong>
+
+                        โปรเจกต์นี้มีจุดเริ่มต้นมาจากแม่ของผมมีภาวะความดันโลหิตไม่คงที่
+                        แพทย์ได้แนะนำให้จดบันทึกค่าความดันอย่างสม่ำเสมอ
+                        แต่ที่ผ่านมามักพบปัญหาลืมจดบันทึกหรือทำเอกสารสูญหาย
+                        ส่งผลให้แพทย์ขาดข้อมูลต่อเนื่องในการติดตามอาการ
+                        ผมจึงนำความรู้ทางเทคโนโลยีช่วยแก้ปัญหานี้
+                        ด้วยการพัฒนาแอปพลิเคชันบนสมาร์ตโฟน
+                        เพื่อให้การบันทึกข้อมูลเป็นเรื่องง่าย
+
+                    </p>
+
+
+                    <p style="margin-top: 10px;">
+
+                        <strong>แนวคิด :</strong>
+
+                        การพัฒนาแอปพลิเคชันสำหรับบันทึกข้อมูลและจัดการข้อมูลสุขภาพส่วนบุคคล
+                        แทนการจดบันทึกบนกระดาษ
+                        พร้อมระบบประมวลผลและแจ้งเตือนอัตโนมัติที่ใช้งานง่าย
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 OBJECTIVE
+            ========================= -->
+
+            <div class="section-title">
+                วัตถุประสงค์
+            </div>
+
+
+            <div class="objective">
+
+                <ul>
+
+                    <li>
+                        เพื่อพัฒนาแอปพลิเคชันบันทึก
+                        ติดตาม และประมวลผลค่าความดันโลหิตเบื้องต้น
+                    </li>
+
+                    <li>
+                        เพื่อสร้างระบบแจ้งเตือนนัดหมายแพทย์แบบเรียลไทม์
+                    </li>
+
+                    <li>
+                        เพื่อให้มีฐานข้อมูลสุขภาพส่วนบุคคล
+                        พร้อมนำไปประเมินแนวทางการรักษาร่วมกับแพทย์ได้ทันที
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- =========================
+                 PROCEDURE
+            ========================= -->
+
+            <div class="procedure">
+
+                <div class="section-title">
+                    วิธีการดำเนินงาน
+                </div>
+
+
+                <ul class="procedure-list">
+
+                    <li>
+
+                        <strong>การพัฒนา :</strong>
+
+                        การเตรียมระบบและกำหนดโครงสร้าง Folder Project
+                        ใน Visual Studio Code จากนั้นออกแบบ UI
+                        และเขียนโค้ดพัฒนาระบบต่าง ๆ ด้วย Flutter Framework (ภาษา Dart)
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>การทดสอบระบบ :</strong>
+
+                        รันและทดสอบการทำงานเครื่องจำลอง (Emulator)
+                        ใน Android Studio และเชื่อมต่อเครื่องจริง
+                        ผ่านสาย USB เพื่อตรวจสอบการแสดงผล
+                        และประสิทธิภาพการทำงานของระบบ
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>การแก้ปัญหา :</strong>
+
+                        ตรวจสอบการทำงานของโค้ดผ่าน Debug Console
+                        และดำเนินการแก้ไข Error ต่าง ๆ
+                        จนมั่นใจว่าแอปพลิเคชันสามารถทำงานได้อย่างถูกต้อง
+                        และเสถียรตามที่ได้ออกแบบไว้
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- =========================
+                 TECHNOLOGY
+            ========================= -->
+
+            <div class="technology">
+
+                <div class="technology-box">
+
+                    <div class="technology-flow">
+
+
+                        <!-- 1. FLUTTER -->
+
+                        <div class="technology-item">
+
+                            <div class="top-text">
+                                ติดตั้งโปรแกรม<br>
+                                Git for windows
+                            </div>
+
+                            <img
+                                src="Git+Flutter.png"
+                                alt="Flutter"
+                            >
+
+                            <div class="bottom-text">
+                                Flutter (SDK)
+                            </div>
+
+                        </div>
+
+
+                        <!-- ARROW -->
+
+                        <div class="tech-arrow"></div>
+
+
+                        <!-- 2. VS CODE -->
+
+                        <div class="technology-item">
+
+                            <div class="top-text">
+                                สร้างโปรเจกต์<br>
+                                และออกแบบหน้าจอ
+                            </div>
+
+                            <img
+                                src="VScode.jpg"
+                                alt="Visual Studio Code"
+                            >
+
+                            <div class="bottom-text">
+                                Visual Studio Code
+                            </div>
+
+                        </div>
+
+
+                        <!-- ARROW -->
+
+                        <div class="tech-arrow"></div>
+
+
+                        <!-- 3. ANDROID STUDIO -->
+
+                        <div class="technology-item">
+
+                            <div class="top-text">
+                                รันและทดสอบการทำงาน<br>
+                                เครื่องจำลอง (Emulator)
+                            </div>
+
+                            <img
+                                src="android-studio.png"
+                                alt="Android Studio"
+                            >
+
+                            <div class="bottom-text">
+                                Android Studio
+                            </div>
+
+                        </div>
+
+
+                        <!-- ARROW -->
+
+                        <div class="tech-arrow"></div>
+
+
+                        <!-- 4. SMART PHONE -->
+
+                        <div class="technology-item">
+
+                            <div class="top-text">
+                                เชื่อมต่อเครื่องจริง<br>
+                                ผ่านสาย USB
+                            </div>
+
+                            <img
+                                src="phone.png"
+                                alt="USB + Smart Phone"
+                            >
+
+                            <div class="bottom-text">
+                                USB + Smart Phone
+                            </div>
+
+                        </div>
+
+
+                        <!-- ARROW -->
+
+                        <div class="tech-arrow"></div>
+
+
+                        <!-- 5. DEBUG -->
+
+                        <div class="technology-item">
+
+                            <div class="top-text">
+                                วิเคราะห์และแก้ไข<br>
+                                Error Code
+                            </div>
+
+                            <img
+                                src="error.png"
+                                alt="Error Code"
+                            >
+
+                            <div class="bottom-text">
+                                Debug Console
+                            </div>
+
+                        </div>
+
+
+                        <!-- ARROW -->
+
+                        <div class="tech-arrow"></div>
+
+
+                        <!-- 6. APPLICATION -->
+
+                        <div class="technology-item">
+
+                            <div class="top-text">
+                                รันโปรแกรมใหม่<br>
+                                พร้อมติดตั้ง App
+                            </div>
+
+                            <img
+                                src="app.png"
+                                alt="Application"
+                            >
+
+                            <div class="bottom-text">
+                                MyBP Application
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 SCREENSHOTS
+            ========================= -->
+
+            <div class="screenshots">
+
+                <div class="screenshots-grid">
+
+
+                    <!-- 1 หน้าหลัก -->
+
+                    <div class="screen-item">
+
+                        <div class="screen-image">
+
+                            <img
+                                src="BP1.png"
+                                alt="หน้าหลัก"
+                            >
+
+                        </div>
+
+                        <p>
+                            <strong>หน้าจอหลักแอปพลิเคชัน</strong>
+                        </p>
+
+                    </div>
+
+
+                    <!-- 2 บันทึกความดัน -->
+
+                    <div class="screen-item">
+
+                        <div class="screen-image">
+
+                            <img
+                                src="BP2.png"
+                                alt="บันทึกความดัน"
+                            >
+
+                        </div>
+
+                        <p>
+
+                            <strong>
+                                1. บันทึกความดัน
+                            </strong>
+
+                            <br>
+
+                            ผู้ใช้งานบันทึก ค่าความดัน
+
+                            <br>
+
+                            วันที่และเวลา
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- 3 ประวัติความดัน -->
+
+                    <div class="screen-item">
+
+                        <div class="screen-image">
+
+                            <img
+                                src="BP3.jpg"
+                                alt="ประวัติความดัน"
+                            >
+
+                        </div>
+
+                        <p>
+
+                            <strong>
+                                2. ประวัติความดัน
+                            </strong>
+
+                            <br>
+
+                            จัดเก็บประวัติ บันทึกไฟล์ PDF
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- 4 ความดันเฉลี่ย -->
+
+                    <div class="screen-item">
+
+                        <div class="screen-image">
+
+                            <img
+                                src="BP4.jpg"
+                                alt="ความดันเฉลี่ย"
+                            >
+
+                        </div>
+
+                        <p>
+
+                            <strong>
+                                3. ความดันเฉลี่ย
+                            </strong>
+
+                            <br>
+
+                            ประมวลผลค่าความดัน
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- 5 สถิติ -->
+
+                    <div class="screen-item">
+
+                        <div class="screen-image">
+
+                            <img
+                                src="BP5.jpg"
+                                alt="กราฟข้อมูล"
+                            >
+
+                        </div>
+
+                        <p>
+
+                            <strong>
+                                4. สถิติ
+                            </strong>
+
+                            <br>
+
+                            แสดงผลกราฟ สรุปข้อมูล
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- 6 คำแนะนำ -->
+
+                    <div class="screen-item">
+
+                        <div class="screen-image">
+
+                            <img
+                                src="BP6.jpg"
+                                alt="คำแนะนำ"
+                            >
+
+                        </div>
+
+                        <p>
+
+                            <strong>
+                                5. คำแนะนำ
+                            </strong>
+
+                            <br>
+
+                            คำแนะนำ ค่าความดัน
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- 7 ตารางนัดแพทย์ -->
+
+                    <div class="screen-item appointment-item">
+
+                        <div class="screen-image">
+
+                            <img
+                                src="BP7.jpg"
+                                alt="ตารางนัดแพทย์"
+                            >
+
+                        </div>
+
+
+                        <p class="appointment-title">
+
+                            <strong>
+                                6. ตารางนัดแพทย์
+                            </strong>
+
+                        </p>
+
+
+                        <div class="appointment-info">
+
+                            บันทึกประวัติการรักษา :
+
+                            <ul>
+
+                                <li>
+                                    เหตุผลในการนัด
+                                </li>
+
+                                <li>
+                                    แผนก/แพทย์
+                                </li>
+
+                                <li>
+                                    สรุปผลตรวจ
+                                </li>
+
+                                <li>
+                                    รายการยา
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 8 ระบบแจ้งเตือน -->
+
+                    <div class="screen-item">
+
+                        <div class="screen-image">
+
+                            <img
+                                src="BP8.jpg"
+                                alt="ระบบแจ้งเตือนนัดหมายแพทย์"
+                            >
+
+                        </div>
+
+                        <p>
+
+                            <strong>
+                                7. ระบบแจ้งเตือนนัดหมายแพทย์<br>
+                                แบบ Real-time
+                            </strong>
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 RESULT
+            ========================= -->
+
+            <div class="result">
+
+                <div class="result-title">
+                    ผลลัพธ์ที่ช่วยแก้ปัญหา
+                </div>
+
+
+                <p>
+
+                    แอปพลิเคชันนี้สามารถใช้งานได้จริง
+                    ช่วยจัดการข้อมูลและติดตามสุขภาพของแม่ผมได้ง่ายขึ้น
+                    ลดขั้นตอนการจดกระดาษ
+                    ช่วยให้ไม่พลาดนัดสำคัญ
+                    และสามารถใช้ข้อมูลนำไปปรึกษาแพทย์ได้ทันที
+
+                </p>
+
+            </div>
+
+
+            <!-- =========================
+                 PROJECT DETAILS
+            ========================= -->
+
+            <div class="detail-section">
+
+                <div class="detail-box">
+
+
+                    <!-- =========================
+                         SKILLS
+                    ========================= -->
+
+                    <div class="detail-card">
+
+                        <div class="detail-card-title">
+                            สิ่งที่ได้เรียนรู้
+                        </div>
+
+
+                        <div class="detail-card-content">
+
+                            <p>
+
+                                ผมได้ฝึกทักษะการออกแบบแอปพลิเคชัน
+                                และการเขียนโปรแกรมด้วย Flutter (ภาษา Dart)
+                                การตรวจสอบและแก้ไขข้อผิดพลาดต่าง ๆ
+                                เพื่อให้แอปพลิเคชันสามารถทำงานได้อย่างถูกต้อง
+                                และมีประสิทธิภาพ
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================
+                         QR CODE
+                    ========================= -->
+
+                    <div class="screen-item qr-item">
+
+                        <div class="screen-image">
+
+                            <img
+                                src="qr.png"
+                                alt="QR Code"
+                            >
+
+                        </div>
+
+                        <p class="qr-title">
+                            App My BP
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================
+         BACK BUTTON
+    ========================= -->
+
+    <div class="back-area">
+
+        <a
+            href="projects.html"
+            class="back-button"
+        >
+            ← กลับหน้าผลงาน
+        </a>
+
+    </div>
+
+
+    <!-- =========================
+         FOOTER
+         เหมือนหน้า Blender
+    ========================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Kachapat Sungsila | MyBP
+        </p>
+
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>
