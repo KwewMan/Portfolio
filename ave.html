@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>โสตทัศนศึกษา | Kachapat Sungsila</title>
+
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- Bootstrap 5 -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+        }
+
+
+        body {
+
+            padding: 25px 25px 0;
+
+            background: #eeeeee;
+
+            font-family: "Kanit", sans-serif;
+
+            color: #111;
+
+            min-height: 100vh;
+
+            display: flex;
+
+            flex-direction: column;
+        }
+
+
+        /* =========================
+           MAIN FRAME
+        ========================= */
+
+        .project-frame {
+
+            position: relative;
+
+            width: 100%;
+
+            max-width: 1200px;
+
+            margin: 15px auto 0;
+
+            background: white;
+
+            border: 5px solid #123fd3;
+
+            border-radius: 50px;
+
+            padding: 105px 35px 35px;
+
+            box-shadow:
+                0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+
+        /* =========================
+           TITLE
+        ========================= */
+
+        .project-title {
+
+            position: absolute;
+
+            top: -27px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            width: 470px;
+
+            max-width: 70%;
+
+            padding: 7px 20px 11px;
+
+            background:
+                linear-gradient(135deg,
+                    #092d82,
+                    #244bd8,
+                    #4777e8);
+
+            color: white;
+
+            text-align: center;
+
+            font-size: 26px;
+
+            font-weight: 600;
+
+            font-style: italic;
+
+            line-height: 1.45;
+
+            border-radius: 22px;
+
+            white-space: nowrap;
+
+            box-shadow:
+                0 4px 8px rgba(0, 0, 0, 0.12);
+
+            z-index: 10;
+        }
+
+
+        /* =========================
+           PHOTO GRID
+        ========================= */
+
+        .photo-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 25px;
+        }
+
+
+        /* =========================
+           PHOTO CARD
+        ========================= */
+
+        .photo-card {
+
+            background: white;
+
+            border: 2px solid #244bd8;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 4px 12px rgba(0, 0, 0, 0.08);
+
+            transition: 0.25s;
+
+            display: flex;
+
+            flex-direction: column;
+        }
+
+
+        .photo-card:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* =========================
+           IMAGE
+        ========================= */
+
+        .photo {
+
+            width: 100%;
+
+            height: 300px;
+
+            background: #eeeeee;
+
+            overflow: hidden;
+        }
+
+
+        .photo img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: 0.3s;
+        }
+
+
+        .photo-card:hover .photo img {
+
+            transform: scale(1.03);
+        }
+
+
+        /* =========================
+           LINK UNDER IMAGE
+        ========================= */
+
+        .photo-link {
+
+            display: block;
+
+            text-align: center;
+
+            padding: 12px 15px;
+
+            background: white;
+
+            border-top: 1px solid #eeeeee;
+
+            color: #244bd8;
+
+            font-size: 17px;
+
+            font-weight: 500;
+
+            text-decoration: none;
+
+            transition: 0.2s;
+        }
+
+
+        .photo-link:hover {
+
+            background: #244bd8;
+
+            color: white;
+        }
+
+
+        /* =========================
+           TEXT
+        ========================= */
+
+        .photo-text {
+
+            padding: 15px 18px 18px;
+
+            text-align: center;
+
+            flex: 1;
+        }
+
+
+        .photo-text h3 {
+
+            margin: 0 0 6px;
+
+            color: #244bd8;
+
+            font-size: 21px;
+
+            font-weight: 500;
+        }
+
+
+        .photo-text p {
+
+            margin: 0;
+
+            color: #555;
+
+            font-size: 16px;
+
+            line-height: 1.55;
+        }
+
+
+        /* =========================
+           DESCRIPTION
+        ========================= */
+
+        .description-box {
+
+            margin-bottom: 35px;
+
+            padding: 22px 25px;
+
+            background: #f7f9ff;
+
+            border-left: 5px solid #244bd8;
+
+            border-radius: 12px;
+        }
+
+
+        .description-box h2 {
+
+            margin: 0 0 8px;
+
+            color: #173bd1;
+
+            font-size: 24px;
+
+            font-weight: 600;
+        }
+
+
+        .description-box p {
+
+            margin: 0;
+
+            font-size: 18px;
+
+            line-height: 1.7;
+
+            color: #444;
+        }
+
+
+        /* =========================
+           BACK BUTTON
+        ========================= */
+
+        .back-area {
+
+            text-align: center;
+
+            margin-top: 25px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .back-button {
+
+            display: inline-block;
+
+            padding: 9px 25px;
+
+            background: white;
+
+            color: #244bd8;
+
+            border: 2px solid #244bd8;
+
+            border-radius: 25px;
+
+            text-decoration: none;
+
+            font-size: 17px;
+
+            transition: 0.2s;
+        }
+
+
+        .back-button:hover {
+
+            background: #244bd8;
+
+            color: white;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+
+            width: 100%;
+
+            max-width: 1200px;
+
+            margin-top: auto;
+
+            margin-left: auto;
+
+            margin-right: auto;
+
+            background: #10104c;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 15px 20px;
+
+            font-size: 15px;
+        }
+
+
+        .footer p {
+
+            margin: 0;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .project-frame {
+
+                padding:
+                    100px 25px 30px;
+            }
+
+
+            .photo-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+                gap: 18px;
+            }
+
+
+            .photo {
+
+                height: 250px;
+            }
+
+
+            .photo-text h3 {
+
+                font-size: 19px;
+            }
+
+
+            .photo-text p {
+
+                font-size: 15px;
+            }
+
+
+            .photo-link {
+
+                font-size: 16px;
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            body {
+
+                padding:
+                    20px 10px 0;
+            }
+
+
+            .project-frame {
+
+                margin-top: 25px;
+
+                border-width: 4px;
+
+                border-radius: 30px;
+
+                padding:
+                    80px 15px 25px;
+            }
+
+
+            .project-title {
+
+                top: -27px;
+
+                width: 75%;
+
+                max-width: 85%;
+
+                padding:
+                    6px 12px 10px;
+
+                font-size: 19px;
+
+                line-height: 1.4;
+
+                border-radius: 20px;
+
+                white-space: normal;
+
+                z-index: 10;
+            }
+
+
+            .photo-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 20px;
+            }
+
+
+            .photo {
+
+                height: auto;
+
+                aspect-ratio: 16 / 10;
+            }
+
+
+            .photo-link {
+
+                padding: 10px 12px;
+
+                font-size: 15px;
+            }
+
+
+            .photo-text {
+
+                padding:
+                    12px 14px 15px;
+            }
+
+
+            .photo-text h3 {
+
+                font-size: 19px;
+            }
+
+
+            .photo-text p {
+
+                font-size: 15px;
+            }
+
+
+            .description-box {
+
+                margin-top: 25px;
+
+                padding:
+                    15px 17px;
+            }
+
+
+            .description-box h2 {
+
+                font-size: 21px;
+            }
+
+
+            .description-box p {
+
+                font-size: 15px;
+
+                line-height: 1.6;
+            }
+
+
+            .back-area {
+
+                margin-top: 20px;
+
+                margin-bottom: 20px;
+            }
+
+
+            .footer {
+
+                padding: 15px;
+
+                font-size: 13px;
+            }
+
+        }
+
+
+        /* =========================
+           SMALL MOBILE
+        ========================= */
+
+        @media (max-width: 400px) {
+
+            .project-title {
+
+                width: 80%;
+
+                max-width: 90%;
+
+                font-size: 17px;
+
+                padding:
+                    5px 10px 9px;
+            }
+
+
+            .project-frame {
+
+                padding-top: 75px;
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         MAIN PROJECT
+    ========================== -->
+
+    <main class="project-frame">
+
+
+        <!-- TITLE -->
+
+        <div class="project-title">
+
+            โสตทัศนศึกษา
+            <br>
+            Audio Visual Education
+
+        </div>
+
+
+        <!-- =========================
+             DESCRIPTION
+        ========================== -->
+
+        <div class="description-box">
+
+            <p>
+
+                ปฏิบัติหน้าที่คณะทำงานฝ่ายโสตทัศนศึกษา ตำแหน่ง Lighting โดยมีหน้าที่ออกแบบ ติดตั้ง
+                และควบคุมระบบแสงบนเวทีของโรงเรียนสวนกุหลาบวิทยาลัย รังสิต ตั้งแต่ชั้นมัธยมศึกษาปีที่ 4-6
+                และได้มีส่วนร่วมในงานพิธีการรวมถึงกิจกรรมต่าง ๆ อย่างสม่ำเสมอ
+                ถือว่าเป็นงานที่ได้ใช้ความคิดสร้างสรรค์ในการออกแบบไฟโชว์ให้เหมาะกับรูปแบบงาน
+                การใช้ทักษะทางเทคนิคในการวางระบบไฟและเชื่อมต่อสายไฟอย่างถูกต้อง
+                เพื่อให้ระบบทำงานได้อย่างสมบูรณ์และปลอดภัย
+
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             PHOTO GRID
+        ========================== -->
+
+        <div class="photo-grid">
+
+
+            <!-- รูปที่ 1 -->
+
+            <div class="photo-card">
+
+                <div class="photo">
+
+                    <img src="ave1.jpg" alt="ave1">
+
+                </div>
+
+            </div>
+
+
+            <!-- รูปที่ 2 -->
+
+            <div class="photo-card">
+
+                <div class="photo">
+
+                    <img src="ave2.jpg" alt="ave2">
+
+                </div>
+
+            </div>
+
+
+            <!-- รูปที่ 3 -->
+
+            <div class="photo-card">
+
+                <div class="photo">
+
+                    <img src="ave3.jpg" alt="ave3">
+
+                </div>
+
+            </div>
+
+
+            <!-- รูปที่ 4 -->
+
+            <div class="photo-card">
+
+                <div class="photo">
+
+                    <img src="ave4.jpg" alt="ave4">
+
+                </div>
+
+            </div>
+
+
+            <!-- รูปที่ 5 -->
+
+            <div class="photo-card">
+
+                <div class="photo">
+
+                    <img src="ave5.jpg" alt="ave5">
+
+                </div>
+                <a class="photo-link">
+
+                    ค่ายปฐมนิเทศนักเรียนใหม่
+                    ระดับชั้นมัธยมศึกษาปีที่ 1 <br>รุ่นที่ 34 “กุหลาบโอลิมปิกฟิสิกส์ สกร.” ปีการศึกษา 2569
+
+                </a>
+
+            </div>
+
+
+            <!-- รูปที่ 6 -->
+
+            <div class="photo-card">
+
+                <div class="photo">
+
+                    <img src="ave6.jpg" alt="ave6">
+
+                </div>
+                <a class="photo-link">
+
+                    SKR MUSIC TALENT 2026
+                </a>
+
+            </div>
+
+
+            <!-- รูปที่ 7 -->
+
+            <div class="photo-card">
+
+                <div class="photo">
+
+                    <img src="ave7.jpg" alt="ave7">
+
+                </div>
+                <a class="photo-link">
+
+                    SKR MUSIC TALENT 2026
+
+                </a>
+
+            </div>
+
+
+            <!-- รูปที่ 8 -->
+
+            <div class="photo-card">
+
+                <div class="photo">
+
+                    <img src="ave8.jpg" alt="ave8">
+
+                </div>
+                <a class="photo-link">
+
+                    SKR MUSIC TALENT 2026
+
+                </a>
+
+            </div>
+
+
+            <!-- =========================
+                 รูปที่ 9
+            ========================== -->
+
+            <div class="photo-card">
+
+                <div class="photo">
+
+                    <img src="ave9.webp" alt="ave9">
+
+                </div>
+
+                <a href="https://www.youtube.com/watch?v=qTfNW6MsGL4" class="photo-link" target="_blank">
+
+                    "พานไหว้ครู" The Legend of Education Beyond the Classroom <br>[ผู้ช่วยกองถ่าย ตำแหน่ง Grip
+                    ทำหน้าที่ติดตั้ง<br>และดูแลอุปกรณ์ประกอบฉาก/แสง]
+
+                </a>
+
+            </div>
+
+
+            <!-- =========================
+                 รูปที่ 10
+            ========================== -->
+
+            <div class="photo-card">
+
+                <div class="photo">
+
+                    <img src="ave10.avif" alt="ave10" target="_blank">
+
+                </div>
+
+                <a href="https://www.youtube.com/watch?v=lLRZEUlGDac" class="photo-link">
+
+                    เดิมเดิม (Once) - LANDOKMAI [UNOFFICIAL MV] <br>[ผู้ช่วยกองถ่าย ตำแหน่ง Grip
+                    ทำหน้าที่ติดตั้ง<br>และดูแลอุปกรณ์ประกอบฉาก/แสง]
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         BACK BUTTON
+    ========================== -->
+
+    <div class="back-area">
+
+        <a href="index.html" class="back-button">
+
+            ← กลับหน้าหลัก
+
+        </a>
+
+    </div>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <p>
+
+            © 2026 Kachapat Sungsila | Audio Visual Education
+
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         BOOTSTRAP JS
+    ========================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
