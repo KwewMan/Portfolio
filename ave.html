@@ -7,7 +7,12 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>โสตทัศนศึกษา | Kachapat Sungsila</title>
+    <title>คชาพัฒน์ สังข์ศิละ | Portfolio</title>
+
+
+    <!-- Bootstrap 5 -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
     <!-- Google Font -->
@@ -19,185 +24,276 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 
-    <!-- Bootstrap 5 -->
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
-
-        html,
-        body {
-            margin: 0;
-            padding: 0;
-            min-height: 100%;
-        }
-
+        /* =========================
+           BODY
+        ========================= */
 
         body {
-
-            padding: 25px 25px 0;
-
-            background: #eeeeee;
 
             font-family: "Kanit", sans-serif;
 
+            background: #eeeeee;
+
             color: #111;
 
-            min-height: 100vh;
+            margin: 0;
 
-            display: flex;
-
-            flex-direction: column;
         }
 
 
         /* =========================
-           MAIN FRAME
+           PAGE
         ========================= */
 
-        .project-frame {
-
-            position: relative;
+        .page {
 
             width: 100%;
 
             max-width: 1200px;
 
-            margin: 15px auto 0;
+            min-height: 100vh;
+
+            margin: auto;
 
             background: white;
 
-            border: 5px solid #123fd3;
-
-            border-radius: 50px;
-
-            padding: 105px 35px 35px;
-
-            box-shadow:
-                0 3px 10px rgba(0, 0, 0, 0.08);
         }
 
 
         /* =========================
-           TITLE
+           HEADER
         ========================= */
 
-        .project-title {
+        .header {
 
-            position: absolute;
-
-            top: -27px;
-
-            left: 50%;
-
-            transform: translateX(-50%);
-
-            width: 470px;
-
-            max-width: 70%;
-
-            padding: 7px 20px 11px;
+            height: 90px;
 
             background:
-                linear-gradient(135deg,
-                    #092d82,
-                    #244bd8,
-                    #4777e8);
-
-            color: white;
-
-            text-align: center;
-
-            font-size: 26px;
-
-            font-weight: 600;
-
-            font-style: italic;
-
-            line-height: 1.45;
-
-            border-radius: 22px;
-
-            white-space: nowrap;
-
-            box-shadow:
-                0 4px 8px rgba(0, 0, 0, 0.12);
-
-            z-index: 10;
-        }
-
-
-        /* =========================
-           PHOTO GRID
-        ========================= */
-
-        .photo-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 25px;
-        }
-
-
-        /* =========================
-           PHOTO CARD
-        ========================= */
-
-        .photo-card {
-
-            background: white;
-
-            border: 2px solid #244bd8;
-
-            border-radius: 18px;
-
-            overflow: hidden;
-
-            box-shadow:
-                0 4px 12px rgba(0, 0, 0, 0.08);
-
-            transition: 0.25s;
+                linear-gradient(to right,
+                    #0d3f78,
+                    #176fd1,
+                    #0d3f78);
 
             display: flex;
 
-            flex-direction: column;
+            align-items: center;
+
+            justify-content: center;
+
         }
 
 
-        .photo-card:hover {
+        .header-title {
 
-            transform: translateY(-5px);
+            color: white;
 
-            box-shadow:
-                0 8px 20px rgba(0, 0, 0, 0.15);
+            font-size: 42px;
+
+            font-weight: 700;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 10px;
+
+        }
+
+
+        .header-title::before {
+
+            content: "<";
+
+            color: #ffcc00;
+
+            font-size: 45px;
+
+        }
+
+
+        .header-title::after {
+
+            content: ">";
+
+            color: #ffcc00;
+
+            font-size: 45px;
+
         }
 
 
         /* =========================
-           IMAGE
+           HERO
         ========================= */
 
-        .photo {
+        .hero {
 
-            width: 100%;
+            min-height: 480px;
 
-            height: 300px;
+            display: flex;
 
-            background: #eeeeee;
+            align-items: center;
 
-            overflow: hidden;
+            padding: 50px;
+
         }
 
 
-        .photo img {
+        /* =========================
+           HERO TEXT
+        ========================= */
+
+        .hello {
+
+            font-size: 28px;
+
+            color: #555;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .name {
+
+            font-size: 48px;
+
+            font-weight: 700;
+
+            color: #222;
+
+            line-height: 1.2;
+
+        }
+
+
+        .name-en {
+
+            font-size: 30px;
+
+            color: #244bd8;
+
+            font-weight: 500;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .description {
+
+            font-size: 18px;
+
+            color: #555;
+
+            line-height: 1.7;
+
+            max-width: 500px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .button-area {
+
+            display: flex;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .button {
+
+            display: inline-block;
+
+            padding: 10px 25px;
+
+            background:
+                linear-gradient(to right,
+                    #1744c9,
+                    #517ee9);
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 25px;
+
+            font-size: 17px;
+
+            border: 2px solid #173bd1;
+
+            transition: 0.2s;
+
+        }
+
+
+        .button:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 5px 12px rgba(0, 0, 0, 0.25);
+
+            color: white;
+
+        }
+
+
+        .button-outline {
+
+            background: white;
+
+            color: #1744c9;
+
+        }
+
+
+        .button-outline:hover {
+
+            color: #1744c9;
+
+        }
+
+
+        /* =========================
+           PROFILE IMAGE
+        ========================= */
+
+        .profile-frame {
+
+            width: 330px;
+
+            height: 330px;
+
+            border-radius: 50%;
+
+            border: 5px solid #244bd8;
+
+            padding: 8px;
+
+            background: white;
+
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, 0.2);
+
+            overflow: hidden;
+
+        }
+
+
+        .profile-frame img {
 
             width: 100%;
 
@@ -205,177 +301,161 @@
 
             object-fit: cover;
 
-            display: block;
+            object-position: center;
 
-            transition: 0.3s;
-        }
-
-
-        .photo-card:hover .photo img {
-
-            transform: scale(1.03);
-        }
-
-
-        /* =========================
-           LINK UNDER IMAGE
-        ========================= */
-
-        .photo-link {
+            border-radius: 50%;
 
             display: block;
 
-            text-align: center;
-
-            padding: 12px 15px;
-
-            background: white;
-
-            border-top: 1px solid #eeeeee;
-
-            color: #244bd8;
-
-            font-size: 17px;
-
-            font-weight: 500;
-
-            text-decoration: none;
-
-            transition: 0.2s;
-        }
-
-
-        .photo-link:hover {
-
-            background: #244bd8;
-
-            color: white;
         }
 
 
         /* =========================
-           TEXT
+           MENU
         ========================= */
 
-        .photo-text {
+        .menu-section {
 
-            padding: 15px 18px 18px;
+            padding: 20px 50px 50px;
+
+        }
+
+
+        .menu-title {
 
             text-align: center;
 
-            flex: 1;
-        }
-
-
-        .photo-text h3 {
-
-            margin: 0 0 6px;
-
-            color: #244bd8;
-
-            font-size: 21px;
-
-            font-weight: 500;
-        }
-
-
-        .photo-text p {
-
-            margin: 0;
-
-            color: #555;
-
-            font-size: 16px;
-
-            line-height: 1.55;
-        }
-
-
-        /* =========================
-           DESCRIPTION
-        ========================= */
-
-        .description-box {
-
-            margin-bottom: 35px;
-
-            padding: 22px 25px;
-
-            background: #f7f9ff;
-
-            border-left: 5px solid #244bd8;
-
-            border-radius: 12px;
-        }
-
-
-        .description-box h2 {
-
-            margin: 0 0 8px;
-
-            color: #173bd1;
-
-            font-size: 24px;
+            font-size: 28px;
 
             font-weight: 600;
-        }
 
+            margin-bottom: 25px;
 
-        .description-box p {
+            color: #222;
 
-            margin: 0;
-
-            font-size: 18px;
-
-            line-height: 1.7;
-
-            color: #444;
         }
 
 
         /* =========================
-           BACK BUTTON
+           MENU GRID
+           บังคับให้มี 2 กล่องต่อแถว
         ========================= */
 
-        .back-area {
+        .menu-grid {
 
-            text-align: center;
+            display: grid;
 
-            margin-top: 25px;
+            grid-template-columns: repeat(2, 340px);
 
-            margin-bottom: 25px;
+            justify-content: center;
+
+            gap: 24px;
+
+            width: 100%;
+
         }
 
 
-        .back-button {
+        /* =========================
+           MENU ITEM
+        ========================= */
 
-            display: inline-block;
+        .menu-item {
 
-            padding: 9px 25px;
+            width: 340px;
 
-            background: white;
+        }
 
-            color: #244bd8;
+
+        /* =========================
+           MENU CARD
+        ========================= */
+
+        .menu-card {
+
+            display: block;
+
+            width: 100%;
 
             border: 2px solid #244bd8;
 
-            border-radius: 25px;
+            border-radius: 15px;
+
+            overflow: hidden;
+
+            background: white;
 
             text-decoration: none;
 
-            font-size: 17px;
+            color: #111;
+
+            height: 100%;
 
             transition: 0.2s;
+
         }
 
 
-        .back-button:hover {
+        .menu-card:hover {
 
-            background: #244bd8;
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 7px 18px rgba(0, 0, 0, 0.2);
+
+            color: #111;
+
+        }
+
+
+        /* =========================
+           CARD HEADER
+        ========================= */
+
+        .card-header-custom {
+
+            background:
+                linear-gradient(to bottom,
+                    #1446c9,
+                    #76a1f0);
 
             color: white;
 
-            transform: translateY(-2px);
+            text-align: center;
+
+            padding: 10px;
+
+            font-size: 20px;
+
+            font-weight: 500;
+
+        }
+
+
+        /* =========================
+           CARD CONTENT
+        ========================= */
+
+        .card-content {
+
+            min-height: 120px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 15px;
+
+            font-size: 16px;
+
+            color: #444;
+
+            line-height: 1.6;
+
         }
 
 
@@ -385,31 +465,16 @@
 
         .footer {
 
-            width: 100%;
+            text-align: center;
 
-            max-width: 1200px;
-
-            margin-top: auto;
-
-            margin-left: auto;
-
-            margin-right: auto;
+            padding: 20px;
 
             background: #10104c;
 
             color: white;
 
-            text-align: center;
+            font-size: 14px;
 
-            padding: 15px 20px;
-
-            font-size: 15px;
-        }
-
-
-        .footer p {
-
-            margin: 0;
         }
 
 
@@ -417,45 +482,51 @@
            TABLET
         ========================= */
 
-        @media (max-width: 900px) {
+        @media (max-width: 991px) {
 
-            .project-frame {
+            .hero {
 
-                padding:
-                    100px 25px 30px;
+                padding: 35px;
+
             }
 
 
-            .photo-grid {
+            .name {
 
-                grid-template-columns:
-                    repeat(2, 1fr);
+                font-size: 40px;
 
-                gap: 18px;
             }
 
 
-            .photo {
+            .profile-frame {
 
-                height: 250px;
+                width: 280px;
+
+                height: 280px;
+
             }
 
 
-            .photo-text h3 {
+            .menu-section {
 
-                font-size: 19px;
+                padding-left: 30px;
+
+                padding-right: 30px;
+
             }
 
 
-            .photo-text p {
+            .menu-grid {
 
-                font-size: 15px;
+                grid-template-columns: repeat(2, minmax(0, 340px));
+
             }
 
 
-            .photo-link {
+            .menu-item {
 
-                font-size: 16px;
+                width: 100%;
+
             }
 
         }
@@ -465,130 +536,88 @@
            MOBILE
         ========================= */
 
-        @media (max-width: 600px) {
+        @media (max-width: 767px) {
 
-            body {
+            .header {
 
-                padding:
-                    20px 10px 0;
+                height: 75px;
+
             }
 
 
-            .project-frame {
+            .header-title {
 
-                margin-top: 25px;
+                font-size: 30px;
 
-                border-width: 4px;
-
-                border-radius: 30px;
-
-                padding:
-                    80px 15px 25px;
             }
 
 
-            .project-title {
+            .header-title::before,
+            .header-title::after {
 
-                top: -27px;
+                font-size: 34px;
 
-                width: 75%;
-
-                max-width: 85%;
-
-                padding:
-                    6px 12px 10px;
-
-                font-size: 19px;
-
-                line-height: 1.4;
-
-                border-radius: 20px;
-
-                white-space: normal;
-
-                z-index: 10;
             }
 
 
-            .photo-grid {
+            .hero {
 
-                grid-template-columns: 1fr;
+                min-height: auto;
+
+                padding: 30px 20px;
+
+                text-align: center;
+
+            }
+
+
+            .hero-left {
+
+                margin-bottom: 30px;
+
+            }
+
+
+            .description {
+
+                margin-left: auto;
+
+                margin-right: auto;
+
+            }
+
+
+            .button-area {
+
+                justify-content: center;
+
+            }
+
+
+            .menu-section {
+
+                padding: 20px;
+
+            }
+
+
+            /* มือถือให้เหลือ 1 กล่องต่อแถว */
+
+            .menu-grid {
+
+                grid-template-columns: minmax(0, 340px);
 
                 gap: 20px;
+
             }
 
 
-            .photo {
+            .menu-item {
 
-                height: auto;
+                width: 100%;
 
-                aspect-ratio: 16 / 10;
-            }
+                max-width: 340px;
 
-
-            .photo-link {
-
-                padding: 10px 12px;
-
-                font-size: 15px;
-            }
-
-
-            .photo-text {
-
-                padding:
-                    12px 14px 15px;
-            }
-
-
-            .photo-text h3 {
-
-                font-size: 19px;
-            }
-
-
-            .photo-text p {
-
-                font-size: 15px;
-            }
-
-
-            .description-box {
-
-                margin-top: 25px;
-
-                padding:
-                    15px 17px;
-            }
-
-
-            .description-box h2 {
-
-                font-size: 21px;
-            }
-
-
-            .description-box p {
-
-                font-size: 15px;
-
-                line-height: 1.6;
-            }
-
-
-            .back-area {
-
-                margin-top: 20px;
-
-                margin-bottom: 20px;
-            }
-
-
-            .footer {
-
-                padding: 15px;
-
-                font-size: 13px;
             }
 
         }
@@ -598,24 +627,71 @@
            SMALL MOBILE
         ========================= */
 
-        @media (max-width: 400px) {
+        @media (max-width: 450px) {
 
-            .project-title {
+            .header-title {
 
-                width: 80%;
+                font-size: 23px;
 
-                max-width: 90%;
-
-                font-size: 17px;
-
-                padding:
-                    5px 10px 9px;
             }
 
 
-            .project-frame {
+            .header-title::before,
+            .header-title::after {
 
-                padding-top: 75px;
+                font-size: 27px;
+
+            }
+
+
+            .hello {
+
+                font-size: 22px;
+
+            }
+
+
+            .name {
+
+                font-size: 32px;
+
+            }
+
+
+            .name-en {
+
+                font-size: 23px;
+
+            }
+
+
+            .description {
+
+                font-size: 16px;
+
+            }
+
+
+            .profile-frame {
+
+                width: 250px;
+
+                height: 250px;
+
+            }
+
+
+            .menu-grid {
+
+                grid-template-columns: minmax(0, 100%);
+
+            }
+
+
+            .menu-item {
+
+                max-width: 100%;
+
             }
 
         }
@@ -627,261 +703,280 @@
 <body>
 
 
-    <!-- =========================
-         MAIN PROJECT
-    ========================== -->
-
-    <main class="project-frame">
-
-
-        <!-- TITLE -->
-
-        <div class="project-title">
-
-            โสตทัศนศึกษา
-            <br>
-            Audio Visual Education
-
-        </div>
+    <div class="page">
 
 
         <!-- =========================
-             DESCRIPTION
-        ========================== -->
+             HEADER
+        ========================= -->
 
-        <div class="description-box">
+        <header class="header">
 
-            <p>
+            <div class="header-title">
 
-                ปฏิบัติหน้าที่คณะทำงานฝ่ายโสตทัศนศึกษา ตำแหน่ง Lighting โดยมีหน้าที่ออกแบบ ติดตั้ง
-                และควบคุมระบบแสงบนเวทีของโรงเรียนสวนกุหลาบวิทยาลัย รังสิต ตั้งแต่ชั้นมัธยมศึกษาปีที่ 4-6
-                และได้มีส่วนร่วมในงานพิธีการรวมถึงกิจกรรมต่าง ๆ อย่างสม่ำเสมอ
-                ถือว่าเป็นงานที่ได้ใช้ความคิดสร้างสรรค์ในการออกแบบไฟโชว์ให้เหมาะกับรูปแบบงาน
-                การใช้ทักษะทางเทคนิคในการวางระบบไฟและเชื่อมต่อสายไฟอย่างถูกต้อง
-                เพื่อให้ระบบทำงานได้อย่างสมบูรณ์และปลอดภัย
+                PORTFOLIO
 
-            </p>
+            </div>
 
-        </div>
+        </header>
+
 
 
         <!-- =========================
-             PHOTO GRID
-        ========================== -->
+             HERO
+        ========================= -->
 
-        <div class="photo-grid">
+        <section class="hero">
+
+            <div class="container-fluid">
+
+                <div class="row align-items-center">
 
 
-            <!-- รูปที่ 1 -->
+                    <!-- LEFT -->
 
-            <div class="photo-card">
+                    <div class="col-lg-6 col-md-6">
 
-                <div class="photo">
+                        <div class="hero-left">
 
-                    <img src="ave1.jpg" alt="ave1">
+                            <div class="hello">
+
+                                สวัสดีครับ 👋
+
+                            </div>
+
+
+                            <div class="name">
+
+                                คชาพัฒน์ สังข์ศิละ
+
+                            </div>
+
+
+                            <div class="name-en">
+
+                                Kachapat Sungsila
+
+                            </div>
+
+
+                            <div class="description">
+
+                                นักเรียนสายวิทยาศาสตร์-คณิตศาสตร์<br>
+
+                                ที่สนใจด้านคอมพิวเตอร์ การเขียนโปรแกรม<br>
+
+                                การออกแบบเว็บไซต์ และเทคโนโลยี
+
+                            </div>
+
+
+                            <div class="button-area">
+
+                                <a href="personal.html" class="button">
+
+                                    ประวัติส่วนตัว
+
+                                </a>
+
+
+                                <a href="#menu" class="button button-outline">
+
+                                    ดูเพิ่มเติม
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- RIGHT -->
+
+                    <div class="col-lg-6 col-md-6 d-flex justify-content-center align-items-center">
+
+                        <div class="profile-frame">
+
+                            <img src="profile2.jpg" alt="Kachapat Sungsila">
+
+                        </div>
+
+                    </div>
+
 
                 </div>
 
             </div>
 
+        </section>
 
-            <!-- รูปที่ 2 -->
 
-            <div class="photo-card">
 
-                <div class="photo">
+        <!-- =========================
+             MENU
+        ========================= -->
 
-                    <img src="ave2.jpg" alt="ave2">
+        <section class="menu-section" id="menu">
+
+            <div class="container-fluid">
+
+
+                <div class="menu-title">
+
+                    &lt; เมนูเว็บไซต์ &gt;
+
+                </div>
+
+
+                <!-- MENU GRID -->
+
+                <div class="menu-grid">
+
+
+                    <!-- =====================
+                         ROW 1 - PERSONAL
+                    ====================== -->
+
+                    <div class="menu-item">
+
+                        <a href="personal.html" class="menu-card">
+
+                            <div class="card-header-custom">
+
+                                ประวัติส่วนตัว
+
+                            </div>
+
+                            <div class="card-content">
+
+                                ข้อมูลส่วนตัว<br>
+
+                                ประวัติการศึกษา<br>
+
+                                คะแนนภาษาอังกฤษ
+
+                            </div>
+
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- =====================
+                         ROW 1 - SKILLS
+                    ====================== -->
+
+                    <div class="menu-item">
+
+                        <a href="skills.html" class="menu-card">
+
+                            <div class="card-header-custom">
+
+                                ทักษะความสามารถ
+
+                            </div>
+
+                            <div class="card-content">
+
+                                C • Python • Dart • Flutter<br>
+
+                                HTML • CSS • JavaScript
+
+                            </div>
+
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- =====================
+                         ROW 2 - PROJECTS
+                    ====================== -->
+
+                    <div class="menu-item">
+
+                        <a href="projects.html" class="menu-card">
+
+                            <div class="card-header-custom">
+
+                                ผลงาน
+
+                            </div>
+
+                            <div class="card-content">
+
+                                การออกแบบด้วยโปรแกรม Blender<br>
+
+                                MyBP บันทึกสุขภาพความดัน<br>
+
+                                Web Application ระบบบันทึกข้อมูลอุปกรณ์
+
+                            </div>
+
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- =====================
+                         ROW 2 - AVE
+                    ====================== -->
+
+                    <div class="menu-item">
+
+                        <a href="ave.html" class="menu-card">
+
+                            <div class="card-header-custom">
+
+                                โสตทัศนศึกษา (AVE)
+
+                            </div>
+
+                            <div class="card-content">
+
+                                ผลงานด้านโสตทัศนศึกษา <br>(Audio Visual Education)<br>
+                                ฝ่าย Lighting
+
+
+
+                            </div>
+
+                        </a>
+
+                    </div>
+
 
                 </div>
 
             </div>
 
+        </section>
 
-            <!-- รูปที่ 3 -->
 
-            <div class="photo-card">
 
-                <div class="photo">
+        <!-- =========================
+             FOOTER
+        ========================= -->
 
-                    <img src="ave3.jpg" alt="ave3">
+        <footer class="footer">
 
-                </div>
+            © 2026 Kachapat Sungsila
+            | Personal Portfolio
 
-            </div>
+        </footer>
 
-
-            <!-- รูปที่ 4 -->
-
-            <div class="photo-card">
-
-                <div class="photo">
-
-                    <img src="ave4.jpg" alt="ave4">
-
-                </div>
-
-            </div>
-
-
-            <!-- รูปที่ 5 -->
-
-            <div class="photo-card">
-
-                <div class="photo">
-
-                    <img src="ave5.jpg" alt="ave5">
-
-                </div>
-                <a class="photo-link">
-
-                    ค่ายปฐมนิเทศนักเรียนใหม่
-                    ระดับชั้นมัธยมศึกษาปีที่ 1 <br>รุ่นที่ 34 “กุหลาบโอลิมปิกฟิสิกส์ สกร.” ปีการศึกษา 2569
-
-                </a>
-
-            </div>
-
-
-            <!-- รูปที่ 6 -->
-
-            <div class="photo-card">
-
-                <div class="photo">
-
-                    <img src="ave6.jpg" alt="ave6">
-
-                </div>
-                <a class="photo-link">
-
-                    SKR MUSIC TALENT 2026
-                </a>
-
-            </div>
-
-
-            <!-- รูปที่ 7 -->
-
-            <div class="photo-card">
-
-                <div class="photo">
-
-                    <img src="ave7.jpg" alt="ave7">
-
-                </div>
-                <a class="photo-link">
-
-                    SKR MUSIC TALENT 2026
-
-                </a>
-
-            </div>
-
-
-            <!-- รูปที่ 8 -->
-
-            <div class="photo-card">
-
-                <div class="photo">
-
-                    <img src="ave8.jpg" alt="ave8">
-
-                </div>
-                <a class="photo-link">
-
-                    SKR MUSIC TALENT 2026
-
-                </a>
-
-            </div>
-
-
-            <!-- =========================
-                 รูปที่ 9
-            ========================== -->
-
-            <div class="photo-card">
-
-                <div class="photo">
-
-                    <img src="ave9.webp" alt="ave9">
-
-                </div>
-
-                <a href="https://www.youtube.com/watch?v=qTfNW6MsGL4" class="photo-link" target="_blank">
-
-                    "พานไหว้ครู" The Legend of Education Beyond the Classroom <br>[ผู้ช่วยกองถ่าย ตำแหน่ง Grip
-                    ทำหน้าที่ติดตั้ง<br>และดูแลอุปกรณ์ประกอบฉาก/แสง]
-
-                </a>
-
-            </div>
-
-
-            <!-- =========================
-                 รูปที่ 10
-            ========================== -->
-
-            <div class="photo-card">
-
-                <div class="photo">
-
-                    <img src="ave10.avif" alt="ave10" target="_blank">
-
-                </div>
-
-                <a href="https://www.youtube.com/watch?v=lLRZEUlGDac" class="photo-link" target="_blank">
-
-                    เดิมเดิม (Once) - LANDOKMAI [UNOFFICIAL MV] <br>[ผู้ช่วยกองถ่าย ตำแหน่ง Grip
-                    ทำหน้าที่ติดตั้ง<br>และดูแลอุปกรณ์ประกอบฉาก/แสง]
-
-                </a>
-
-            </div>
-
-
-        </div>
-
-
-    </main>
-
-
-
-    <!-- =========================
-         BACK BUTTON
-    ========================== -->
-
-    <div class="back-area">
-
-        <a href="index.html" class="back-button">
-
-            ← กลับหน้าหลัก
-
-        </a>
 
     </div>
 
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <footer class="footer">
-
-        <p>
-
-            © 2026 Kachapat Sungsila | Audio Visual Education
-
-        </p>
-
-    </footer>
-
-
-
-    <!-- =========================
-         BOOTSTRAP JS
-    ========================== -->
+    <!-- Bootstrap JS -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
